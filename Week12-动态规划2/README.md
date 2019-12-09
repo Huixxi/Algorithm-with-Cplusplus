@@ -1,22 +1,34 @@
 # 动态规划进阶
 可以用动态规划解决的问题包含两个性质：  
-* 最优子结构（Optimal Substructure）
+* 最优子结构（Optimal Substructure）  
 如果给定问题的最优解可以通过使用子问题的最优解来获得，这个给定的问题则具有最优子结构性质。
-* 重叠子问题（Overlapping Subproblems）
+* 重叠子问题（Overlapping Subproblems）  
 类似分治法，动态规划也会组合子问题的解。不同是的，在动态规划中这些子问题的解会被重复利用，将被重复使用的子问题的解存在一个表中则避免了这些子问题解的重复计算，大大减少了计算时间。可以理解为，带记忆的递归。
 
 ## 01背包问题
-Given weights(**w**) and values(**v**) of **n** items, put these items in a knapsack of capacity **W** to get the maximum total value in the knapsack.（给定**n**个物品的重量**w**和价值**v**，把它们放进一个容量为**W**的背包中，使获得价值最大。）  
-E.g.:  
+Given weights(**w**) and values(**v**) of **n** items, put these items in a knapsack of capacity **W** to get the maximum total value in the knapsack.（给定**n**个物品的重量**w**和价值**v**，把它们放进一个容量为**W**的背包中，使获得价值最大。）   
 ```python
-# 3件物品，背包容量为50
+# e.g. 3件物品，背包容量为50
 values = [80, 100, 120]
 weights = [10, 20, 30]
 W = 50
+
+# 输出：
+220
 ```
-**解释：**  
-所谓0-1，就是拿或不拿，物品不可拆分。对于每个物品来说，都有两种情况，即在或不在最优子集中。因此，我们可以获得的最大价值，则为一下两种情况中的最大值：
-* 
+**解释（自底向上法）：**  
+所谓0-1，就是拿或不拿，物品不可拆分。对于每个物品来说，都有两种情况，即在或不在最优子集中。因此，从n件物品中我们可以获得的最大价值，则为以下两种情况中的最大值：  
+* 不包含第n件物品，由之前的n-1件物品获得的最大价值和W容量，`d[n-1][W]`
+* 包含第n件物品，加上由之前n-1件物品所获得的最大价值和W-w_n容量，`d[n-1][W-w_n] + v_n`  
+
+即：`d[n][W] = max(d[n-1][W], d[n-1][W-w_n] + v_n)`
+使用普通递归法解题：  
+```c++
+int knapsack(int i, int W) {
+  
+}
+```
+
 
 
 **习题：**  
