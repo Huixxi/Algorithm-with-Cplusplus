@@ -24,12 +24,34 @@ W = 50
 即：`d[n][W] = max(d[n-1][W], d[n-1][W-w_n] + v_n)`
 使用普通递归法解题：  
 ```c++
-int knapsack(int i, int W) {
-  
+// Just borrow code from https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
+int knapsack_dfs(int n, int W, int w[], int v[]) {
+    if(n == 0 || W == 0)
+        return 0;
+    if(W - w[n-1] < 0)
+        return knapsack_dfs(n-1, W, w, v);
+    else
+        return max(knapsack_dfs(n-1, W, w, v), knapsack_dfs(n-1, W-w[n-1], w, v) + v[n-1]);
 }
 ```
-
-
+使用动态规划法解题：
+```c++
+// Just borrow code from https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
+int knapsack_dp(int n, int W, int w[], int v[]) {
+    int K[n+1][W+1];
+    for(int i = 0; i <= n; ++i) {
+        for(int k = 0; k <= W; ++k) {
+            if(i == 0 || k == 0)
+                K[i][k] = 0;
+            else if(W - w[i-1] < 0)
+                K[i][k] = K[i-1][k];  // no calculation, save time
+            else
+                K[i][k] = max(K[i-1][k], K[i-1][k-w[i-1]] + v[i-1]);
+        }
+    }
+    return K[n][W];
+}
+```
 
 **习题：**  
 * **[**[UVa10616:Divisible Group Sums](https://vjudge.net/problem/UVA-10616)**]** **[**[Solution(C++)]()**]**
