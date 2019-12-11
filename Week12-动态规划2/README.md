@@ -22,6 +22,7 @@ W = 50
 * 包含第n件物品，加上由之前n-1件物品所获得的最大价值和W-w_n容量，`d[n-1][W-w_n] + v_n`  
 
 即：`d[n][W] = max(d[n-1][W], d[n-1][W-w_n] + v_n)`  
+
 使用普通递归法解题：  
 ```c++
 // Just borrow code from https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
