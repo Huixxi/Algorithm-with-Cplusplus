@@ -29,28 +29,28 @@ W = 50
 使用普通递归法解题：  
 ```c++
 // Just borrow code from https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
-int knapsack_dfs(int n, int W, int w[], int v[]) {
+int knapsack_dfs(int n, int W, int ws[], int vs[]) {
     if(n == 0 || W == 0)
         return 0;
-    if(W - w[n-1] < 0)
-        return knapsack_dfs(n-1, W, w, v);
+    if(W - ws[n-1] < 0)
+        return knapsack_dfs(n-1, W, ws, v);
     else
-        return max(knapsack_dfs(n-1, W, w, v), knapsack_dfs(n-1, W-w[n-1], w, v) + v[n-1]);
+        return max(knapsack_dfs(n-1, W, ws, v), knapsack_dfs(n-1, W-ws[n-1], ws, v) + v[n-1]);
 }
 ```
 使用动态规划法解题：
 ```c++
 // Just borrow code from https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
-int knapsack_dp(int n, int W, int w[], int v[]) {
-    int K[n+1][W+1];
+int knapsack_dp(int n, int W, int ws[], int vs[]) {
+    int K[n+1][W+1];  
     for(int i = 0; i <= n; ++i) {
-        for(int k = 0; k <= W; ++k) {
-            if(i == 0 || k == 0)
-                K[i][k] = 0;
-            else if(W - w[i-1] < 0)
-                K[i][k] = K[i-1][k];  // no calculation, save time
+        for(int w = 0; w <= W; ++w) {
+            if(i == 0 || w == 0)
+                K[i][w] = 0; 
+            else if(W - ws[i-1] < 0)
+                K[i][w] = K[i-1][w];  // no calculation, save time
             else
-                K[i][k] = max(K[i-1][k], K[i-1][k-w[i-1]] + v[i-1]);
+                K[i][w] = max(K[i-1][w], K[i-1][w-ws[i-1]] + vs[i-1]);
         }
     }
     return K[n][W];
