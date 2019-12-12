@@ -5,6 +5,9 @@
 * 重叠子问题（Overlapping Subproblems）  
 类似分治法，动态规划也会组合子问题的解。不同是的，在动态规划中这些子问题的解会被重复利用，将被重复使用的子问题的解存在一个表中则避免了这些子问题解的重复计算，大大减少了计算时间。可以理解为，带记忆的递归。
 
+**资料推荐：**
+[背包问题九讲(Tianyi Cui)](https://raw.githubusercontent.com/tianyicui/pack/master/V2.pdf)
+
 ## 01背包问题
 Given weights(**w**) and values(**v**) of **n** items, put these items in a knapsack of capacity **W** to get the maximum total value in the knapsack.（给定**n**个物品的重量**w**和价值**v**，把它们放进一个容量为**W**的背包中，使获得价值最大。）   
 ```python
