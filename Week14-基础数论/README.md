@@ -1,9 +1,11 @@
 # 基础数论
 ### 斐波那契数（Fibonacci数）
 $f(1) = 1, f(0) = 0.$   
-$f(n) = f(n-1) + f(n+2)$  **Note:** **`f(n)%n`** is a periodic sequence.  
+$f(n) = f(n-1) + f(n+2)$   
+**Note:** **`f(n)%n`** is a periodic sequence.  
+**To Find The Index Of A Given Fibonacci Number:  **
 ```c++
-// Formula based Method: To Find The Index Of A Given Fibonacci Number
+// Formula based Method: 
 // Fibs = [0, 1, 1, 2, 3, 5, 8, 13, ...]
 // n = round { 2.078087 * log(Fn) + 1.672276 }
 #include<bits/stdc++.h> 
