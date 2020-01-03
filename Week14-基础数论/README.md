@@ -1,7 +1,27 @@
 # 基础数论
 ### 斐波那契数（Fibonacci数）
 $f(1) = 1, f(0) = 0.$   
-$f(n) = f(n-1) + f(n+2)$  **注：**`f(n)%n`是一个周期序列.
+$f(n) = f(n-1) + f(n+2)$  **Note:** **`f(n)%n`** is a periodic sequence.  
+```c++
+// Formula based Method: To Find The Index Of A Given Fibonacci Number
+// Fibs = [0, 1, 1, 2, 3, 5, 8, 13, ...]
+// n = round { 2.078087 * log(Fn) + 1.672276 }
+#include<bits/stdc++.h> 
+  
+int findIndex(int n) 
+{ 
+    float fibo = 2.078087 * log(n) + 1.672276; 
+    return round(fibo); 
+} 
+
+int main() 
+{ 
+    int n = 55; 
+    cout << findIndex(n); 
+} 
+
+// Output: 10
+```
 
 ### 卡特兰数（Catlan数）
 $C_0 = 1, C_{n+1} = \sum_{i=0}^n C_iC_{n-i}(n>=0)$  **Or:**  $C(n) = \frac{2n(2n-1)}{(n+1)n}C(n-1)$
