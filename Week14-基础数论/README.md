@@ -20,7 +20,9 @@ using namespace std;
 ```
 
 **习题：**  
-* **[**[UVa948:Fibonaccimal Base](https://vjudge.net/problem/UVA-948)**]** **[**[Solution(C++)]()**]**
+* **[**[UVa948:Fibonaccimal Base](https://vjudge.net/problem/UVA-948)**]** **[**[Solution(C++)][1]**]**
 * **[**[UVa10689:Yet another Number Sequence](https://vjudge.net/problem/UVA-10689)**]** **[**[Solution(C++)]()**]**
 * **[**[UVa991:Safe Salutations](https://vjudge.net/problem/UVA-991)**]** **[**[Solution(C++)]()**]**
 * **[**[UVa10007:Count the Trees](https://vjudge.net/problem/UVA-10007)**]** **[**[Solution(C++)]()**]**
+
+[1]: https://github.com/Huixxi/Algorithm-with-Cplusplus/blob/master/Week14-%E5%9F%BA%E7%A1%80%E6%95%B0%E8%AE%BA/UVA948_Fibonaccimal_Base.cpp
