@@ -3,7 +3,7 @@
 $f(1) = 1, f(0) = 0.$   
 $f(n) = f(n-1) + f(n+2)$   
 **Note:** **`f(n)%n`** is a periodic sequence.  
-**To Find The Index Of A Given Fibonacci Number:  **
+**To Find The Index Of A Given Fibonacci Number:**  
 ```c++
 // Formula based Method: 
 // Fibs = [0, 1, 1, 2, 3, 5, 8, 13, ...]
