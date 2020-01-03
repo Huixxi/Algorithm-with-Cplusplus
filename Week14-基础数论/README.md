@@ -8,16 +8,16 @@ $f(n) = f(n-1) + f(n+2)$  **Note:** **`f(n)%n`** is a periodic sequence.
 // n = round { 2.078087 * log(Fn) + 1.672276 }
 #include<bits/stdc++.h> 
   
-int findIndex(int n) 
+int findIndex(int Fn) 
 { 
-    float fibo = 2.078087 * log(n) + 1.672276; 
+    float fibo = 2.078087 * log(Fn) + 1.672276; 
     return round(fibo); 
 } 
 
 int main() 
 { 
-    int n = 55; 
-    cout << findIndex(n); 
+    int Fn = 55; 
+    cout << findIndex(Fn); 
 } 
 
 // Output: 10
