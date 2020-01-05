@@ -2,6 +2,7 @@
 ### 斐波那契数（Fibonacci数）
 > $f(1) = 1, f(0) = 0.$   
 $f(n) = f(n-1) + f(n+2)$   
+  
 **Note:** **`f(n)%n`** is a periodic sequence.  
   
 **To Find The Index Of A Given Fibonacci Number:**  
@@ -26,8 +27,9 @@ int main()
 // Output: 10
 ```
 
-### 卡特兰数（Catalan数）[wiki](https://en.wikipedia.org/wiki/Catalan_number)
-$C_0 = 1, C_{n+1} = \sum_{i=0}^n C_iC_{n-i}(n>=0)$  **Or:**  $C(n) = \frac{2n(2n-1)}{(n+1)n}C(n-1)$
+### 卡特兰数（Catalan数）
+$C_0 = 1, C_{n+1} = \sum_{i=0}^n C_iC_{n-i}(n>=0)$  **Or:**  $C(n) = \frac{2n(2n-1)}{(n+1)n}C(n-1)$  
+[Read More](https://en.wikipedia.org/wiki/Catalan_number)
 
 ### 组合计数
 $C_m^n = \frac{m!}{(m-n)!n!}$
