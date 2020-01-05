@@ -26,7 +26,7 @@ int main()
 // Output: 10
 ```
 
-### 卡特兰数（Catlan数）
+### 卡特兰数（Catalan数）
 $C_0 = 1, C_{n+1} = \sum_{i=0}^n C_iC_{n-i}(n>=0)$  **Or:**  $C(n) = \frac{2n(2n-1)}{(n+1)n}C(n-1)$
 
 ### 组合计数
