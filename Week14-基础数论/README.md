@@ -33,7 +33,8 @@ $C_0 = 1, C_{n+1} = \sum_{i=0}^n C_iC_{n-i}(n>=0)$  **-Or-**  $C(n) = \frac{2n(2
 Read more about catalan number: [wikipedia](https://en.wikipedia.org/wiki/Catalan_number)
 
 ### 组合计数
-$C_m^n = \frac{m!}{(m-n)!n!}$
+$C_m^n = \frac{m!}{(m-n)!n!}$  
+$2^N = C_N^0 + C_N^1 + C_N^2 + \dots + C_N^N$
 
 **板子：**  
 ```c++
