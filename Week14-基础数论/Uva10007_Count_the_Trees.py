@@ -1,4 +1,5 @@
-# Consider that 300! is too large to store in C++, I use python this time.
+# Consider that 300! is too large to store in C++, which will make the code too complex, I use python this time.
+# a[n] = a[0]*a[n-1] + a[1]*a[n-2] + ... + a[n-1]*a[0]
 
 import math
 
