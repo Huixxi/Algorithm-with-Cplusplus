@@ -46,7 +46,6 @@ $C(n, k) = C(n-1, k-1) + C(n-1, k)$
 
 #include <bits/stdc++.h>
 #define int long long
-
 using namespace std;
 
 const int MAXN = 2e3 + 10;
