@@ -20,3 +20,5 @@ while True:
                 a[i] += a[j] * a[i-j-1]
         start = n
         print(a[n] * math.factorial(n))
+
+ 
