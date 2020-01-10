@@ -33,7 +33,7 @@ $C_0 = 1, C_{n+1} = \sum_{i=0}^n C_iC_{n-i}(n>=0)$  **-Or-**  $C(n) = \frac{2n(2
 Read more about catalan number: [wikipedia](https://en.wikipedia.org/wiki/Catalan_number)
 
 ### 组合计数
-$C_n^m = {n \choose m} = \frac{m!}{(m-n)!n!}$  
+$C_n^m = {n \choose m} = \frac{n!}{(n-m)!m!}$  
 $2^N = C_N^0 + C_N^1 + C_N^2 + \dots + C_N^N$
 
 **板子：**  
