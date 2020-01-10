@@ -29,7 +29,7 @@ int main()
 
 ### 卡特兰数（Catalan数）
 $C_0 = 1, C_{n+1} = \sum_{i=0}^n C_iC_{n-i}(n>=0)$  **Or:**  $C(n) = \frac{2n(2n-1)}{(n+1)n}C(n-1)$  
-Top10: $C_0 = 1, C_1 = 1, C_2 = 2, C_3 = 5, C_4 = 14, C_5 = 132, C_6 = 429, C_7 = 429, C_8 = 4862, C_9 = 16796, C_10 = 58786$
+**Top10:** $C_0 = 1, C_1 = 1, C_2 = 2, C_3 = 5, C_4 = 14, C_5 = 132, C_6 = 429, C_7 = 429, C_8 = 4862, C_9 = 16796, C_{10} = 58786$
 Read more about catalan number: [wikipedia](https://en.wikipedia.org/wiki/Catalan_number)
 
 ### 组合计数
