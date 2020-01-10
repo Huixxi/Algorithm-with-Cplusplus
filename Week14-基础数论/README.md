@@ -42,13 +42,33 @@ $C(n, k) = C(n-1, k-1) + C(n-1, k)$
 
 **板子：**  
 ```c++
+// Pascal Triangle
+
 #include <bits/stdc++.h>
 #define int long long
 
 using namespace std;
 
+const int MAXN = 2e3 + 10;
+const int MAXR = 2e3 + 10 + 10;
+const int MODN = 1e9 + 7;  // 当数字比较大这里需要模一下
+int l[MAXN][MAXR] = {0};
 
+void initialize() {
+    l[0][0] = 1;
+    for(int i = 1; i < MAXN; ++i) {
+        l[i][0] = 1;
+        for(int j = 0; j < i + 1; ++j) {
+            l[i][j] = (l[i-1][j-1] + l[i-1][j]) % MODN;
+        }
+    }
+}
 
+// Function to return the value of nCr 
+int nCr(int n, int r)
+{
+    return l[n][r];  // Return nCr 
+}
 ```
 
 **习题：**  
