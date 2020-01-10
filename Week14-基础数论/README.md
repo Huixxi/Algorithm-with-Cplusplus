@@ -35,8 +35,10 @@ Read more about catalan number: [wikipedia](https://en.wikipedia.org/wiki/Catala
 ### 组合计数
 $C_n^m = {n \choose m} = \frac{n!}{(n-m)!m!}$  
 $2^N = C_N^0 + C_N^1 + C_N^2 + \dots + C_N^N$  
+  
 Calculate "Combination Number Formula" in DP(O(n^2)).  
-$C(n, 0) = C(n, n) = 1, C(n, k) = C(n-1, k-1) + C(n-1, k)$
+$C(n, 0) = C(n, n) = 1 $  
+$C(n, k) = C(n-1, k-1) + C(n-1, k)$
 
 **板子：**  
 ```c++
