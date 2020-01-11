@@ -79,8 +79,8 @@ int nCr(int n, int r) {
 * naive
 * O(sqrt(n))
 * O(sqrt(n)/ln(sqrt(n))
-
-3. 找出一个数的所有质因子
+3. 找出一个数的所有质因子  
+[primes.cpp](https://github.com/Huixxi/Algorithm-with-Cplusplus/blob/master/Week14-%E5%9F%BA%E7%A1%80%E6%95%B0%E8%AE%BA/primes.cpp)
 
 ### 最大公约数(GCD)
 ```c++
