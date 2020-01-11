@@ -71,7 +71,39 @@ int nCr(int n, int r) {
 1. (a + b) % s = (a%s + b%s) % s
 2. (a - b) % s = (a%s - b%s + s) % s
 3. (a * b) % s = (a%s) * (b%s) % s
-4. (a / b) % s = (a*(b^(s-2)) % s
+4. (a / b) % s = (a*(b^(s-2)) % s (only when s is prime number)
+
+### 基础知识
+1. 什么是质数，什么是合数
+2. 如何检验一个数是不是质数
+* naive
+* O(sqrt(n))
+* O(sqrt(n)/ln(sqrt(n))
+
+3. 找出一个数的所有质因子
+
+### 最大公约数(GCD)
+```c++
+int gcd(int a, int b) {
+    return b == 0 ? a : gcd(b, a%b);
+}
+// consider using __gcd in c++
+```
+
+### 最小公倍数(lcm)
+```c++
+iny lcm(int a, int b) {
+    return (a * b) / gcd(a, b);
+}
+```
+### 解决线性丢番图方程
+* 解决如下问题：ａ*x + b*y = c, 其中a,b,c已知，ｘ,y为所需要求的量。其中要求x,y是整数解。
+* 所需知识：拓展欧几里得
+* 方程有解，当且仅当 c % (gcd(a, b) == 0
+* 方程通解为：　　
+`d = gcd(a, b)`  
+`X = x0 + b/d * n`  
+`Y = y0 - a/d * n`
 
 
 **习题：**  
