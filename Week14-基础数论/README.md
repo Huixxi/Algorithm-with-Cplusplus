@@ -85,7 +85,7 @@ int nCr(int n, int r) {
 ### 最大公约数(GCD)
 ```c++
 int gcd(int a, int b) {
-    return b == 0 ? a : gcd(b, a%b);
+    return b == 0 ? a : gcd(b, a % b);
 }
 // consider using __gcd in c++
 ```
@@ -96,14 +96,32 @@ iny lcm(int a, int b) {
     return (a * b) / gcd(a, b);
 }
 ```
+
 ### 解决线性丢番图方程
-* 解决如下问题：ａ* x + b* y = c, 其中a,b,c已知，ｘ,y为所需要求的量。其中要求x,y是整数解。
+* 解决如下问题：`ａ*x + b*y = c`, 其中`a,b,c`已知，`ｘ,y`为所需要求的量。其中要求`x,y`是整数解。
 * 所需知识：拓展欧几里得
-* 方程有解，当且仅当 c % (gcd(a, b) == 0
+* 方程有解，当且仅当 `c % (gcd(a, b)) == 0`
 * 方程通解为：　　  
 `d = gcd(a, b)`  
 `X = x0 + b/d * n`  
 `Y = y0 - a/d * n`
+
+```c++
+int x, y, d;  // store x, y, d as global varibales
+void extendEuclid(int a, int b) {
+    if(b == 0) {
+        x = 1;
+        y = 0;
+        d = a;
+        return;
+    }  // base case
+    extendEuclid(b, a % b);  // similar as the original gcd
+    int x1 = y;
+    int y1 = x - (a / b) * y;
+    x = x1;
+    y = y1;
+}
+```
 
 
 **习题：**  
