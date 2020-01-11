@@ -12,14 +12,12 @@ $f(n) = f(n-1) + f(n+2)$
 // n = round { 2.078087 * log(Fn) + 1.672276 }
 #include<bits/stdc++.h> 
   
-int findIndex(int Fn) 
-{ 
+int findIndex(int Fn) { 
     float fibo = 2.078087 * log(Fn) + 1.672276; 
     return round(fibo); 
 } 
 
-int main() 
-{ 
+int main() { 
     int Fn = 55; 
     cout << findIndex(Fn); 
 } 
@@ -64,11 +62,17 @@ void initialize() {
 }
 
 // Function to return the value of nCr 
-int nCr(int n, int r)
-{
+int nCr(int n, int r) {
     return l[n][r];  // Return nCr 
 }
 ```
+
+### 取模运算(c++)
+1. (a + b) % s = (a%s + b%s) % s
+2. (a - b) % s = (a%s - b%s + s) % s
+3. (a * b) % s = (a%s) * (b%s) % s
+4. (a / b) % s = (a*(b^(s-2)) % s
+
 
 **习题：**  
 * **[**[UVa948:Fibonaccimal Base](https://vjudge.net/problem/UVA-948)**]** **[**[Solution(C++)][1]**]**
