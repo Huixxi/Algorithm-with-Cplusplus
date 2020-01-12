@@ -1,5 +1,16 @@
 # TSP旅行商问题＆区间DP
+"Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city and returns to the origin city?"  
+给定一个城市列表包含n个城市，以及每对城市之间的距离（转化成图问题的话就是一个**加权完全图**），有一个商人要拜访这n个城市，而且每个城市只能拜访一次，而且最后要回到起点，问我们怎么安排路线可以使得拜访总路程尽可能短？   
+(注意TSP问题和哈密顿圈问题(Hamiltoninan Cycle Problem)的区别，HCP是判断一个图中是否存在一个哈密顿圈，而TSP则是已知存在多个哈密顿圈(因为是完全图)，去求一个权重最小的哈密顿圈)  
+* 暴力的复杂度(naive)：O(n!)
+* 能否用图论中的最短路径算法(Dijkstra等)？ 不可
+* 动态规划(DP)算法复杂度：$O(n^2\times2^n)$
 
+
+
+Read more about TSP problem:  
+* [Wikipedia](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+* [GeeksforGeeks](https://www.geeksforgeeks.org/travelling-salesman-problem-set-1/)
 
 
 **习题：**  
