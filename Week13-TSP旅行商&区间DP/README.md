@@ -6,6 +6,7 @@
 * 能否用图论中的最短路径算法(Dijkstra等)？ 不可
 * 动态规划(DP)算法复杂度：$O(n^2 2^n)$
 ```
+// C(S, i) be the cost of the minimum cost path visiting each vertex in set S exactly once, starting at 1 and ending at i.
 If size of S is 2, then S must be {1, i},
     C(S, i) = dist(1, i) 
 Else if size of S is greater than 2.
