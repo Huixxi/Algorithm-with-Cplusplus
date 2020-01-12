@@ -5,12 +5,18 @@
 * 暴力的复杂度(naive)：$O(n!)$
 * 能否用图论中的最短路径算法(Dijkstra等)？ 不可
 * 动态规划(DP)算法复杂度：$O(n^2 2^n)$
-
+```
+If size of S is 2, then S must be {1, i},
+    C(S, i) = dist(1, i) 
+Else if size of S is greater than 2.
+    C(S, i) = min { C(S-{i}, j) + dis(j, i)} where j belongs to S, j != i and j != 1.
+```
+* 近似算法(Approximate using MST)：[GeeksforGeeks-TSP2](https://www.geeksforgeeks.org/travelling-salesman-problem-set-2-approximate-using-mst/)
 
 
 Read more about TSP problem:  
 * [Wikipedia](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
-* [GeeksforGeeks](https://www.geeksforgeeks.org/travelling-salesman-problem-set-1/)
+* [GeeksforGeeks-TSP1](https://www.geeksforgeeks.org/travelling-salesman-problem-set-1/)
 
 
 **习题：**  
