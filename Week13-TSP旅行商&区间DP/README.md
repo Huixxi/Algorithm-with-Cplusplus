@@ -14,7 +14,7 @@ If size of S is 2, then S must be {1, i},
 Else if size of S is greater than 2.
     C(S, i) = min { C(S-{i}, j) + dis(j, i)} where j belongs to S, j != i and j != 1.
 ```
-* 近似算法(Approximate using MST)：[GeeksforGeeks-TSP2](https://www.geeksforgeeks.org/travelling-salesman-problem-set-2-approximate-using-mst/)
+* 近似算法([Approximate using MST](https://www.geeksforgeeks.org/travelling-salesman-problem-set-2-approximate-using-mst/))
 
 
 Read more about TSP problem:  
