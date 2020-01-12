@@ -4,7 +4,7 @@
 **[** 注意TSP问题和哈密顿圈问题(Hamiltoninan Cycle Problem)的区别，HCP是判断一个图中是否存在一个哈密顿圈，而TSP则是已知存在多个哈密顿圈(因为是完全图)，去求一个权重最小的哈密顿圈 **]**  
 * 暴力的复杂度(naive)：$O(n!)$
 * 能否用图论中的最短路径算法(Dijkstra等)？ 不可
-* 动态规划(DP)算法复杂度：$O(n^2 2^n)$
+* 动态规划(DP)算法复杂度：$O(n^2 2^n)$，空间复杂度为：$O(n 2^n)$
 ```
 // C(S, i) be the cost of the minimum cost path visiting each vertex in set S exactly once, 
 // starting at 1 and ending at i.
