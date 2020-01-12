@@ -6,10 +6,9 @@
 * 能否用图论中的最短路径算法(Dijkstra等)？ 不可
 * 动态规划(DP)算法复杂度：$O(n^2 2^n)$
 ```
-/*
-C(S, i) be the cost of the minimum cost path visiting each vertex in set S exactly once, 
-starting at 1 and ending at i.
-*/
+// C(S, i) be the cost of the minimum cost path visiting each vertex in set S exactly once, 
+// starting at 1 and ending at i.
+
 If size of S is 2, then S must be {1, i},
     C(S, i) = dist(1, i) 
 Else if size of S is greater than 2.
@@ -27,5 +26,5 @@ Read more about TSP problem:
 * **[**[UVa10496:Collecting Beepers](https://vjudge.net/problem/UVA-10496)**]** **[**[Solution(C++)]()**]**
 * **[**[UVa10721:Bar Codes](https://vjudge.net/problem/UVA-10721)**]** **[**[Solution(C++)]()**]**
 * **[**[UVa10943:How do you add?](https://vjudge.net/problem/UVA-10943)**]** **[**[Solution(C++)]()**]**
-* **[**[UVa10003:Cutting Sticks](https://vjudge.net/problem/UVA-10003)**]** **[**[Solution(C++)]()**]**
 * **[**[UVa1261:String Popping](https://vjudge.net/problem/UVA-1261)**]** **[**[Solution(C++)]()**]**
+* **[**[UVa10003:Cutting Sticks](https://vjudge.net/problem/UVA-10003)**]** **[**[Solution(C++)]()**]**
