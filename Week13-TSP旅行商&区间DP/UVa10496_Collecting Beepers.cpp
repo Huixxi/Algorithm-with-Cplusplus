@@ -11,7 +11,6 @@ struct coords {
 } xy[11];
 
 void TSP(int s, int i, int s_size) {
-    // |s| = C_n^0 + C_n^1 + C_n^2 + ... + C_n^n-1 + C_n^n = 2^n
     // s_size = 0, 1, 2, ..., n
     if(s_size == N) {
         ans = min(dp[s][i] + dist[i][0], ans);
