@@ -123,7 +123,6 @@ void extendEuclid(int a, int b) {
 }
 ```
 
-
 **习题：**  
 * **[**[UVa948:Fibonaccimal Base](https://vjudge.net/problem/UVA-948)**]** **[**[Solution(C++)][1]**]**
 * **[**[UVa10689:Yet another Number Sequence](https://vjudge.net/problem/UVA-10689)**]** **[**[Solution(C++)][2]**]**
