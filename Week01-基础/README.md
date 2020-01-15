@@ -4,7 +4,7 @@
 * 单独使用`cin`对数据流输入是不够的，大家再试着看看`getline`的用法，同时注意`getline`和`cin`对换行符的不同处理。
 * 了解`freopen`的用法，了解这个函数是为了让你可以本地模拟评测机环境，我们建立一个`input.txt`然后用`freopen`导入`txt`中的数据给程序。  
 
-**To learn C++: [Fast C++](https://github.com/Huixxi/Fast-C-plus-plus)**
+**\[To learn C++: [Fast C++](https://github.com/Huixxi/Fast-C-plus-plus)\]**
 
 **习题：**  
 * **[**[UVa1585:Score](https://vjudge.net/problem/UVA-1585)**]** **[**[Solution(C++)][1]**]**
