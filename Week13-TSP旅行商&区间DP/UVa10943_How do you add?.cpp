@@ -11,7 +11,6 @@ int main() {
             dp[k][n] = (dp[k-1][n] + dp[k][n-1]) % MODN;
         }
     }
-
     int N, K;
     while(cin >> N >> K && N + K) {
         cout << dp[K][N] << endl;
