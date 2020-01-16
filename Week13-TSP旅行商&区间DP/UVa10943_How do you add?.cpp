@@ -14,7 +14,7 @@ int main() {
 
     int N, K;
     while(cin >> N >> K && N + K) {
-        cout << dp[K][N];
+        cout << dp[K][N] << endl;
     }
     return 0;
 }
