@@ -10,7 +10,6 @@ struct TreeNode {
 class Solution {
 public:
     int res = 0, m = 0;
-    vector<int> vec;
     int TreeDepth(TreeNode* pRoot)
     {
         // dfs
