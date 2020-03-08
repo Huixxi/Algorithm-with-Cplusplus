@@ -1,0 +1,8 @@
+#### Pattern 1 : Sliding Window (滑动窗口类型)
+1. Maximum Sum Subarray of Size K (easy)
+2. Smallest Subarray with a given sum (easy)
+3. Longest Substring with K Distinct Characters (medium)
+4. Fruits into Baskets (medium)
+5. No-repeat Substring (hard)
+6. Longest Substring with Same Letters after Replacement (hard)
+7. Longest Subarray with Ones after Replacement (hard)
