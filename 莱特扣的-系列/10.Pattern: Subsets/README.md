@@ -1,0 +1,7 @@
+#### Pattern 10 : Subsets (子集类型，一般都是使用多重DFS)
+1. Subsets (easy)
+2. Subsets With Duplicates (easy)
+3. Permutations (medium)
+4. String Permutations by changing case (medium)
+5. Balanced Parentheses (hard)
+6. Unique Generalized Abbreviations (hard)
