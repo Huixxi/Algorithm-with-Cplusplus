@@ -1,0 +1,8 @@
+#### Pattern 7 : Tree Breadth First Search (树上的BFS)
+1. Binary Tree Level Order Traversal (easy)
+2. Reverse Level Order Traversal (easy)
+3. Minimum Depth of a Binary Tree (easy)
+4. Level Averages in a Binary Tree (easy)
+5. Level Order Successor (easy)
+6. Zigzag Traversal (medium)
+7. Connect Level Order Siblings (medium)
