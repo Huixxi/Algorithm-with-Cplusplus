@@ -1,0 +1,5 @@
+#### Pattern 14 : 0/1 Knapsack (Dynamic Programming) (0/1背包类型)
+1. 0/1 Knapsack (medium)
+2. Equal Subset Sum Partition (medium)
+3. Subset Sum (medium)
+4. Minimum Subset Sum Difference (hard)
