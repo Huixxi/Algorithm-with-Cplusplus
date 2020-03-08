@@ -1,0 +1,5 @@
+#### Pattern 4 : Fast&Slow Pointers (快慢指针类型)
+1. LinkedList Cycle (easy)
+2. Middle of the LinkedList (easy)
+3. Happy Number (medium)
+4. Start of LinkedList Cycle (medium)
