@@ -1,0 +1,8 @@
+#### Pattern 11 : Modified Binary Search (改造过的二分)
+1. Bitonic Array Maximum (easy)
+2. Order-agnostic Binary Search (easy)
+3. Ceiling of a Number (medium)
+4. Next Letter (medium)
+5. Number Range (medium)
+6. Search in a Sorted Infinite Array (medium)
+7. Minimum Difference Element (medium)
