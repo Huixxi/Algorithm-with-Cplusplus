@@ -1,0 +1,6 @@
+#### Pattern 5 : Cyclic Sort (循环排序)
+1. Cyclic Sort (easy)
+2. Find the Missing Number (easy)
+3. Find all Missing Numbers (easy)
+4. Find the Duplicate Number (easy)
+5. Find all Duplicate Numbers (easy)
