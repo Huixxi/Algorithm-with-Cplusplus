@@ -1,7 +1,7 @@
 #### Pattern 1 : Sliding Window (滑动窗口类型)
 1. [Maximum Sum Subarray of Size K (easy) -- GeeksforGeeks](https://www.geeksforgeeks.org/find-maximum-minimum-sum-subarray-size-k/)
 2. [Smallest Subarray with a given sum (medium) -- LeetCode](https://leetcode.com/problems/minimum-size-subarray-sum/)
-3. [Longest Substring with K Distinct Characters (medium, google) -- LintCode](https://www.lintcode.com/problem/longest-substring-with-at-most-k-distinct-characters/description]
+3. [Longest Substring with K Distinct Characters (medium, google) -- LintCode](https://www.lintcode.com/problem/longest-substring-with-at-most-k-distinct-characters/description)
 4. Fruits into Baskets (medium)
 5. No-repeat Substring (hard)
 6. Longest Substring with Same Letters after Replacement (hard)
