@@ -1,6 +1,6 @@
 #### Pattern 2 : Two Pointers (双指针类型)
 1. [Pair with Target Sum (easy) -- LeetCode](https://leetcode.com/problems/two-sum/)
-2. Remove Duplicates (easy)
+2. [Remove Duplicates (easy) -- LeetCode](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 3. Squaring a Sorted Array (easy)
 4. Triplet Sum to Zero (medium)
 5. Triplet Sum Close to Target (medium)
