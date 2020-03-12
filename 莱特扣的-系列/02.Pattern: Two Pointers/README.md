@@ -2,7 +2,7 @@
 1. [Pair with Target Sum (easy) -- LeetCode](https://leetcode.com/problems/two-sum/)
 2. [Remove Duplicates (easy) -- LeetCode](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 3. [Squaring a Sorted Array (easy) -- LeetCode](https://leetcode.com/problems/squares-of-a-sorted-array/)
-4. Triplet Sum to Zero (medium)
+4. [Triplet Sum to Zero (medium) -- LeetCode](https://leetcode.com/problems/3sum)
 5. Triplet Sum Close to Target (medium)
 6. Triplets with Smaller Sum (medium)
 7. Subarrays with Product Less than a Target (medium)
