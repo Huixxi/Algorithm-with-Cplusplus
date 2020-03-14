@@ -47,7 +47,7 @@ int knapsack_dp(int n, int W, int ws[], int vs[]) {
         for(int w = 0; w <= W; ++w) {
             if(i == 0 || w == 0)
                 K[i][w] = 0; 
-            else if(W - ws[i-1] < 0)
+            else if(w - ws[i-1] < 0)
                 K[i][w] = K[i-1][w];  // no calculation, save time
             else
                 K[i][w] = max(K[i-1][w], K[i-1][w-ws[i-1]] + vs[i-1]);
