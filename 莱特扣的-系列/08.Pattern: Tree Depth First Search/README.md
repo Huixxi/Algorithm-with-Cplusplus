@@ -1,6 +1,6 @@
 #### Pattern 8 : Tree Depth First Search (树上的DFS)
-1. Binary Tree Path Sum (easy)
-2. All Paths for a Sum (medium)
+1. [Binary Tree Path Sum (easy) -- LeetCode](https://leetcode.com/problems/path-sum/)
+2. [All Paths for a Sum (medium) -- LeetCode](https://leetcode.com/problems/path-sum-ii/)
 3. Sum of Path Numbers (medium)
 4. Path With Given Sequence (medium)
 5. Count Paths for a Sum (medium)
