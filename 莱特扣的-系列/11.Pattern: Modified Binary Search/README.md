@@ -6,3 +6,4 @@
 5. [Number Range (medium) -- LeetCode](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 6. [Search in a Sorted Infinite Array (medium) -- GeeksforGeeks](https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/)
 7. [Minimum Difference Element (medium) -- GeeksforGeeks](https://www.geeksforgeeks.org/find-minimum-difference-pair/)
+8. [Kth Smallest Element in a Sorted Matrix -- LeetCode](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)
