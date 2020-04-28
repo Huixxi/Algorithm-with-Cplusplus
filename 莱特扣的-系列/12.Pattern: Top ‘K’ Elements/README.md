@@ -6,5 +6,5 @@
 5. [Kth Largest Number in a Stream (medium) - LeetCode](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 6. [‘K’ Closest Numbers (medium) -- LeetCode](https://leetcode.com/problems/find-k-closest-elements/)
 7. [Maximum Distinct Elements (medium) -- GeeksforGeeks](https://www.geeksforgeeks.org/maximum-distinct-elements-removing-k-elements/)
-8. [Sum of Elements (medium) -- LeetCode](https://leetcode.com/problems/count-of-range-sum/)
-9. [Rearrange String (hard) -- LeetCode](https://leetcode.com/problems/reorganize-string/)
+8. [Sum of Elements (hard) -- LeetCode](https://leetcode.com/problems/count-of-range-sum/)
+9. [Rearrange String (medium) -- LeetCode](https://leetcode.com/problems/reorganize-string/)
