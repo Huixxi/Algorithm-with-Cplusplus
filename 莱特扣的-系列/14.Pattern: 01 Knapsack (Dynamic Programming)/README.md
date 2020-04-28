@@ -1,5 +1,5 @@
 #### Pattern 14 : 0/1 Knapsack (Dynamic Programming) (0/1背包类型)
-1. 0/1 Knapsack (medium)
+1. [0/1 Knapsack (medium) -- GeeksforGeeks](https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/)
 2. [Equal Subset Sum Partition (medium) -- LeetCode](https://leetcode.com/problems/partition-equal-subset-sum/)
 3. [Subset Sum (medium) -- GeeksforGeeks](https://www.geeksforgeeks.org/subset-sum-problem-dp-25/)
 4. [Constrained Subset Sum (hard) -- LeetCode](https://leetcode.com/problems/constrained-subset-sum/)
