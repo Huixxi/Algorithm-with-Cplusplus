@@ -9,19 +9,15 @@ public:
     bool duplicate(int numbers[], int length, int* duplication) {
         if(length <= 0)
             return false;
-        *duplication = -1;
-        vector<int> res(length, 0);
         for(int i = 0; i < length; ++i) {
-            ++res[numbers[i]];
-            if(numbers[i] >= length)
-                return false;
-            if(res[numbers[i]] == 2) {
-                *duplication = numbers[i];
-                return true;
+            while(numbers[i] != i) {
+                if(numbers[i] == numbers[numbers[i]]) {
+                    *duplication = numbers[i];
+                    return true;
+                }
+                swap(numbers[i], numbers[numbers[i]]);
             }
         }
-        if(*duplication == -1)
-            return false;
-        return true;
+        return false;
     }
 };
