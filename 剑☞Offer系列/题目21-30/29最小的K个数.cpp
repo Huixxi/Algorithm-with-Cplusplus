@@ -1,20 +1,19 @@
 class Solution {
 public:
     vector<int> GetLeastNumbers_Solution(vector<int> input, int k) {
-        if(input.size() < k)
-            return vector<int>();
-        // 红黑树 最大堆 O(logn)
-        multiset<int, greater<int>> res;
-        for(int i = 0; i < input.size(); ++i) {
-            if(i < k)
-                res.insert(input[i]);
-            else {
-                if(input[i] < *res.begin()) {
-                    res.erase(*res.begin());
-                    res.insert(input[i]);
-                }
-            }
+        vector<int> res;
+        if(k > input.size())
+            return res;
+        priority_queue<int, vector<int>, less<>> maxheap;
+        for(auto& x : input) {
+            maxheap.push(x);
+            if(maxheap.size() > k)
+                maxheap.pop();
         }
-        return vector<int>(res.begin(), res.end());
+        while(!maxheap.empty()) {
+            res.push_back(maxheap.top());
+            maxheap.pop();
+        }
+        return res;
     }
 };
