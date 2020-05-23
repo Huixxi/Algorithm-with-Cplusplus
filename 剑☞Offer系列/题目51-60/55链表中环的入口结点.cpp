@@ -9,18 +9,23 @@ struct ListNode {
 */
 class Solution {
 public:
-    ListNode* EntryNodeOfLoop(ListNode* pHead)
-    {
-        map<ListNode*, int> mm;
-        while(pHead) {
-            if(mm.find(pHead) != mm.end())
-                ++mm[pHead];
-            else
-                mm[pHead] = 1;
-            if(mm[pHead] == 2)
-                return pHead;
-            pHead = pHead->next;
+    ListNode* EntryNodeOfLoop(ListNode* pHead) {
+        ListNode *slow = pHead, *fast = pHead;
+        if(!fast || !fast->next)
+            return nullptr;
+        while(fast && fast->next) {
+            slow = slow->next;
+            fast = fast->next->next;
+            if(fast == slow)
+                break;
         }
-        return nullptr;
+        if(slow != fast)
+            return nullptr;
+        slow = pHead;
+        while(slow != fast) {
+            slow = slow->next;
+            fast = fast->next;
+        }
+        return slow;
     }
 };
