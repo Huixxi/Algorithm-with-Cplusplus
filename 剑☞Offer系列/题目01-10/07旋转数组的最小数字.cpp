@@ -1,12 +1,15 @@
 class Solution {
 public:
-    int minNumberInRotateArray(vector<int> rotateArray) {
-        if(rotateArray.size() == 0)
-            return 0;
-        if(rotateArray.size() == 1)
-            return rotateArray[0];
-        for(int i = 1; i < rotateArray.size(); ++i)
-            if(rotateArray[i] < rotateArray[i-1])
-                return rotateArray[i];
+    int minNumberInRotateArray(vector<int>& rotateArray) {
+        const int n = rotateArray.size();
+        int l = 0, r = n - 1, mid = 0;
+        while(l < r) {
+            mid = l + (r - l) / 2;
+            if(rotateArray[mid] < rotateArray[r])
+                r = mid;
+            else 
+                l = mid + 1;
+        }
+        return rotateArray[l];
     }
 };
