@@ -1,9 +1,8 @@
 class Solution {
 public:
     int Sum_Solution(int n) {
-        int sum = 0;
-        for(int i = 1; i <= n; ++i)
-            sum += i;
+        int sum = n;
+        bool ans = (n > 0) && (sum += Sum_Solution(n - 1));
         return sum;
     }
 };
