@@ -2,10 +2,8 @@ class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
         vector<int> res;
-        int nr = matrix.size(); 
-        if(nr == 0) return res;
-        int nc = matrix[0].size();
-        if(nc == 0) return res;
+        int nr = matrix.size(); if(nr == 0) return res;
+        int nc = matrix[0].size(); if(nc == 0) return res;
         vector<vector<int>> dirs{{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
         vector<int> nSteps{nc, nr - 1};
         int idir = 0;
