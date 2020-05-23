@@ -1,7 +1,15 @@
 class Solution {
 public:
-    int LastRemaining_Solution(int n, int m)
-    {
+    /* 
+    The position returned by josephus(n - 1, k) is adjusted because the recursive call  
+    josephus(n - 1, k) considers the original position k % n + 1 as position 1 */
+    int LastRemaining_Solution(int n, int m) {
+        if (n == 0)
+            return -1;
+        if (n == 1) // LastRemaining_Solution(1, m) == 0，幸存者下标为0
+            return 0; 
+        return (LastRemaining_Solution(n - 1, m) + m) % n; 
+        /*
         // 模拟过程
         if(n == 0)
             return -1;
@@ -22,5 +30,6 @@ public:
         for(int i = 0; i < n; ++i)
             if(!tag[i])
                 return i;
+        */
     }
 };
