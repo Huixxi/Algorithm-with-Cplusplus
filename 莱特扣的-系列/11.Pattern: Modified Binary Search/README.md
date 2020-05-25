@@ -5,5 +5,5 @@
 4. [Next Letter (medium) -- LeetCode](https://leetcode.com/problems/find-smallest-letter-greater-than-target/)
 5. [Number Range (medium) -- LeetCode](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 6. [Search in a Sorted Infinite Array (medium) -- GeeksforGeeks](https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/)
-7. [Kth Smallest Element in a Sorted Matrix -- LeetCode](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)
- 
+7. [Kth Smallest Element in a Sorted Matrix (medium) -- LeetCode](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)
+8. [Median of Two Sorted Arrays (hard) -- LeetCode](https://leetcode.com/problems/median-of-two-sorted-arrays/)
