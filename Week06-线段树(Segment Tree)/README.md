@@ -188,4 +188,7 @@ void rangeminQueryLazy(int segTree[], int lazy[], int qlow, int qhigh, int low, 
 * **[**[UVa1232:SKYLINE](https://vjudge.net/problem/UVA-1232)**]** **[**[Solution(C++)][1]**]**
 * **[**[UVa12532:Interval Product](https://vjudge.net/problem/UVA-12532)**]** **[**[Solution(C++)][1]**]**
 
-[1]: https://github.com/Huixxi/Algorithm-with-Cplusplus/blob/master/Week01-%E5%9F%BA%E7%A1%80/UVa1585_Score.cpp
+[1]: https://github.com/Huixxi/Algorithm-with-Cplusplus/blob/master/Week06-%E7%BA%BF%E6%AE%B5%E6%A0%91(Segment%20Tree)/UVa11235_Frequent%20values.cpp
+[2]: https://github.com/Huixxi/Algorithm-with-Cplusplus/blob/master/Week06-%E7%BA%BF%E6%AE%B5%E6%A0%91(Segment%20Tree)/UVa11402_Ahoy%2C%20Pirates!.cpp
+[3]: https://github.com/Huixxi/Algorithm-with-Cplusplus/blob/master/Week06-%E7%BA%BF%E6%AE%B5%E6%A0%91(Segment%20Tree)/UVa1232_SKYLINE.cpp
+[4]: https://github.com/Huixxi/Algorithm-with-Cplusplus/blob/master/Week06-%E7%BA%BF%E6%AE%B5%E6%A0%91(Segment%20Tree)/UVa12532_Interval%20Product.cpp
