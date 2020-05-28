@@ -1,3 +1,3 @@
 ## LeetCode系列-按类型刷题
-[知乎某刷题指南](https://zhuanlan.zhihu.com/p/89392459)
+[Grokking the Coding Interview: Patterns for Coding Questions](https://www.educative.io/courses/grokking-the-coding-interview?aff=K7qB)
  
