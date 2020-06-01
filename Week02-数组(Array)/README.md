@@ -12,3 +12,4 @@ Read more about array: [C++ Notes](https://github.com/Huixxi/Fast-C-plus-plus/bl
 [2]: https://github.com/Huixxi/Algorithm-with-Cplusplus/blob/master/Week02-%E6%95%B0%E7%BB%84/UVa1225_Digit%20Counting.cpp
 [3]: https://github.com/Huixxi/Algorithm-with-Cplusplus/blob/master/Week02-%E6%95%B0%E7%BB%84/UVa232_Crossword%20Answers.cpp
 [4]: https://github.com/Huixxi/Algorithm-with-Cplusplus/blob/master/Week02-%E6%95%B0%E7%BB%84/Uva1588_Kickdown.cpp
+ 
