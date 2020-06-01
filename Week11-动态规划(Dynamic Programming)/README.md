@@ -5,10 +5,43 @@
 
 当使用动态规划解题时，首先要找到子问题（状态），然后明确`dp`数组的含义，明白`dp[i]`或`dp[i][j]`或`dp[i][j][k]`等等代表的是什么，最后寻找状态转移关系。   
 
-## 经典DP问题
+## [经典DP问题](https://github.com/labuladong/fucking-algorithm/tree/master/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%B3%BB%E5%88%97)
 ### 1.KMP字符匹配问题
 给定两个字符串：长度为`m`的模式串`pat`和长度为`n`的文本串`str`。在`str`中查找子串`pat`，如果存在，返回这个子串的起始索引，否则返回`-1`。  
 
+这里的状态设置只与`pat`模式串有关，我们只需关注当前的匹配状态(匹配到第几(i)个字符，那么`dp[i]`的意思就是在当前匹配到`pat`中第i个字符时，遇到字符`str`中第j个字符后应转移到哪个状态。直至遇到最终态`dp[m]`或检测到`str`串已到达结尾。
+```c++
+int dp[1000];
+
+// pat自己针对pat[1:]的匹配
+void commonPrefix(string pat) {
+    int m = pat.length();
+    dp[0] = 0;
+    int k = 0;
+    for(int i = 1; i < m; ++i) {
+        while(k > 0 && pat[k] != pat[i])
+            k = dp[k - 1];
+        if(pat[k] == pat[i])
+            k = k + 1;
+        dp[i] = k;
+    }
+}
+
+// str自己针对pat的匹配
+int searchPat(string str, string pat) {
+    int k = 0;
+    int m = pat.length();
+    for(int i = 0; i < str.length(); ++i) {
+        while(k > 0 && pat[k] != str[i])
+            k = dp[k - 1];
+        if(pat[k] == str[i])
+            k = k + 1;
+        if(k == m)
+            return i - m + 1;
+    }
+    return -1;
+}
+```
 
 
 
