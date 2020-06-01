@@ -1,5 +1,5 @@
 # 动态规划
-> Those who cannot remember the past are condemned to repeat it.    -- Dynamic Programming
+`Those who cannot remember the past are condemned to repeat it.    -- Dynamic Programming`
 
 
 Practice More: [Top 50 Dynamic Programming Practice Problems](https://blog.usejournal.com/top-50-dynamic-programming-practice-problems-4208fed71aa3)
