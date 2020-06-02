@@ -43,6 +43,25 @@ int searchPat(string str, string pat) {
 }
 ```
 
+### 2.凑零钱问题
+给你`k`种面值的硬币，面值分别为`[c1, c2 ... ck]`，每种硬币的数量无限，再给一个总金额 `amount`，问你最少需要几枚硬币凑出这个金额，如果不可能凑出，算法返回 `-1` 。
+```c++
+// coins 中是可选硬币面值，amount 是目标金额
+int coinChange(int[] coins, int amount) {
+    int dp[amount + 1];
+    memset(dp, INT_MAX, sizeof(dp));
+    // base-case
+    dp[0] = 0;  // 当总金额为0时，所需最少金币数量也为0
+    for(int i = 1; i <= amount; ++i) {
+        for(auto coin : coins) {
+            if(i - coin < 0)
+                continue;
+            dp[i] = min(dp[i], 1 + dp[i - coin]);
+        }
+    }
+    return (dp[amount] == amount + 1) ? -1 : dp[amount];
+}
+```
 
 
 Learn More: [Dynamic Programming](https://www.geeksforgeeks.org/dynamic-programming/)   
