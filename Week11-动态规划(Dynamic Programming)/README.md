@@ -63,7 +63,7 @@ int coinChange(int[] coins, int amount) {
 }
 ```
 
-### 3. 股票问题[来自](https://github.com/labuladong/fucking-algorithm/blob/master/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%B3%BB%E5%88%97/%E5%9B%A2%E7%81%AD%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98.md)
+### 3. 股票问题[[来自]](https://github.com/labuladong/fucking-algorithm/blob/master/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%B3%BB%E5%88%97/%E5%9B%A2%E7%81%AD%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98.md)
 给定一个数组，里面的第`i`个元素代表这支股票在第`i`天的价格，在最多进行`k`笔交易(买入卖出算一次)的情况下，求出你可以获得的最大利润。  
 一组状态转移公式抗下所有！！！
 ```
