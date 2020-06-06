@@ -106,6 +106,9 @@ This particular problem and most of others can be approached using the following
 5. Iterative + N variables (bottom-up)
 ```
 
+### 5. 最长公共子序列（LCS）
+
+
 
 
 Learn More: [Dynamic Programming](https://www.geeksforgeeks.org/dynamic-programming/)   
