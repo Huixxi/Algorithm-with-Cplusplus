@@ -23,7 +23,7 @@ void commonPrefix(string pat) {
             k = dp[k - 1];
         if(pat[k] == pat[i])
             k = k + 1;
-        dp[i] = k;
+        dp[i] = k; 
     }
 }
 
@@ -64,6 +64,7 @@ int coinChange(int[] coins, int amount) {
 ```
 
 ### 3. 股票问题[[来自]](https://github.com/labuladong/fucking-algorithm/blob/master/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%B3%BB%E5%88%97/%E5%9B%A2%E7%81%AD%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98.md)
+[题目链接：121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)    
 给定一个数组，里面的第`i`个元素代表这支股票在第`i`天的价格，在最多进行`k`笔交易(买入卖出算一次)的情况下，求出你可以获得的最大利润。  
 一组状态转移公式抗下所有！！！
 ```
@@ -93,6 +94,17 @@ dp[i][0][1] = -infinity
 解释：不允许交易的情况下，是不可能持有股票的，用负无穷表示这种不可能。
 ```
 
+### 4. House Robber问题[[来自]](https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems.)
+[题目链接：198. House Robber](https://leetcode.com/problems/house-robber/)    
+给定一个数组，里面的第`i`个元素代表这间房子里面存放的金额，但相邻两间房子不能在一晚同时被盗，否则会报警，求盗贼一晚上在不触发警报的情况下可以盗取的最大金额数。   
+```
+This particular problem and most of others can be approached using the following sequence:
+1. Find recursive relation  
+2. Recursive (top-down)
+3. Recursive + memo (top-down)
+4. Iterative + memo (bottom-up)
+5. Iterative + N variables (bottom-up)
+```
 
 
 
