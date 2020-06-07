@@ -133,3 +133,4 @@ void extendEuclid(int a, int b) {
 [2]: https://github.com/Huixxi/Algorithm-with-Cplusplus/blob/master/Week14-%E5%9F%BA%E7%A1%80%E6%95%B0%E8%AE%BA/UVa10689_Yet%20another%20Number%20Sequence.cpp
 [3]: https://github.com/Huixxi/Algorithm-with-Cplusplus/blob/master/Week14-%E5%9F%BA%E7%A1%80%E6%95%B0%E8%AE%BA/UVa991_Safe%20Salutations.cpp
 [4]: https://github.com/Huixxi/Algorithm-with-Cplusplus/blob/master/Week14-%E5%9F%BA%E7%A1%80%E6%95%B0%E8%AE%BA/UVa10007_Count%20the%20Trees.py
+ 
