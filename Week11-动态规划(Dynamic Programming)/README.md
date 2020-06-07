@@ -133,7 +133,31 @@ int longestCommonSubsequence(string text1, string text2) {
 ```
 
 ### 6. 博弈问题[[来自]](https://github.com/labuladong/fucking-algorithm/blob/master/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%B3%BB%E5%88%97/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%B9%8B%E5%8D%9A%E5%BC%88%E9%97%AE%E9%A2%98.md)
+[题目链接：877. Stone Game](https://leetcode.com/problems/stone-game/)     
 给定一个数组代表有n堆石头，两个人每次只从当前数组的收尾两端进行选择，问最终是先手获得的石头多还是后手获得的石头多。   
+题解：[Optimal Strategy Game Pick from Ends of array Dynamic Programming](https://www.youtube.com/watch?v=WxpIHvsu1RI)
+
+
+### 7. 最长回文子序列
+[题目链接：516. Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)   
+解法与上面的最长公共子序列类似。  
+```c++
+int longestPalindromeSubseq(string s) {
+    int n = s.length();
+    vector<vector<int>> dp(n, vector<int>(n, 0));
+    for(int i = 0; i < n; ++i) 
+        dp[i][i] = 1;
+    for(int i = n - 2; i >= 0; --i) {
+        for(int j = i + 1; j < n; ++j) {
+            if(s[i] == s[j])
+                dp[i][j] = dp[i+1][j-1] + 2;
+            else
+                dp[i][j] = max(dp[i+1][j-1], max(dp[i][j-1], dp[i+1][j]));
+        }
+    }
+    return dp[0][n-1];
+}
+```
 
 
 
