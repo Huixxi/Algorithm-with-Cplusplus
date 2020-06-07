@@ -107,7 +107,33 @@ This particular problem and most of others can be approached using the following
 ```
 
 ### 5. 最长公共子序列（LCS）
+[题目链接：1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)   
+给定两个字符串，求这两个字符串的最长公共子序列的长度：
+```
+输入: str1 = "abcde", str2 = "ace" 
+输出: 3  
+解释: 最长公共子序列是 "ace"，它的长度是 3
+```
+```c++
+int longestCommonSubsequence(string text1, string text2) {
+    int l1 = text1.length() + 1, l2 = text2.length() + 1;
+    int i = 0, j = 0;
+    int dp[l1 * l2];
+    memset(dp, 0, sizeof(dp));
+    for(i = 1; i < l1; ++i) {
+        for(j = 1; j < l2; ++j) {
+            if(text1[i-1] == text2[j-1])
+                dp[j*l1+i] = dp[(j-1)*l1+(i-1)] + 1;
+            else
+                dp[j*l1+i] = max(dp[(j-1)*l1+i], dp[j*l1+i-1]);
+        }
+    }
+    return dp[(l2-1)*l1+l1-1];
+}
+```
 
+### 6. 博弈问题[[来自]](https://github.com/labuladong/fucking-algorithm/blob/master/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%B3%BB%E5%88%97/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%B9%8B%E5%8D%9A%E5%BC%88%E9%97%AE%E9%A2%98.md)
+给定一个数组代表有n堆石头，两个人每次只从当前数组的收尾两端进行选择，问最终是先手获得的石头多还是后手获得的石头多。   
 
 
 
