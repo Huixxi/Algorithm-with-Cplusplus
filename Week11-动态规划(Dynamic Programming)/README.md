@@ -159,7 +159,10 @@ int longestPalindromeSubseq(string s) {
 }
 ```
 
-
+### 8. 最短编辑距离
+[题目链接：72. Edit Distance](https://leetcode.com/problems/edit-distance/)    
+给定两个字符串`s1`和`s2`，求出将`s1`转换成`s2`的最小操作次数。（共包含三种操作，插入，删除，替换）    
+题解：[C++ O(n)-space DP](https://leetcode.com/problems/edit-distance/discuss/25846/C%2B%2B-O(n)-space-DP)  
 
 Learn More: [Dynamic Programming](https://www.geeksforgeeks.org/dynamic-programming/)   
 
