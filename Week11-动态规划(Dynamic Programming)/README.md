@@ -63,9 +63,10 @@ int coinChange(int[] coins, int amount) {
 }
 ```
 
-### 3. 股票问题[[来自]](https://github.com/labuladong/fucking-algorithm/blob/master/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%B3%BB%E5%88%97/%E5%9B%A2%E7%81%AD%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98.md)
+### 3. 股票问题
 [题目链接：121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)    
-给定一个数组，里面的第`i`个元素代表这支股票在第`i`天的价格，在最多进行`k`笔交易(买入卖出算一次)的情况下，求出你可以获得的最大利润。  
+给定一个数组，里面的第`i`个元素代表这支股票在第`i`天的价格，在最多进行`k`笔交易(买入卖出算一次)的情况下，求出你可以获得的最大利润。   
+[[题解：]](https://github.com/labuladong/fucking-algorithm/blob/master/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%B3%BB%E5%88%97/%E5%9B%A2%E7%81%AD%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98.md)
 一组状态转移公式抗下所有！！！
 ```
 dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i])
@@ -94,9 +95,10 @@ dp[i][0][1] = -infinity
 解释：不允许交易的情况下，是不可能持有股票的，用负无穷表示这种不可能。
 ```
 
-### 4. House Robber问题[[来自]](https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems.)
+### 4. House Robber问题
 [题目链接：198. House Robber](https://leetcode.com/problems/house-robber/)    
 给定一个数组，里面的第`i`个元素代表这间房子里面存放的金额，但相邻两间房子不能在一晚同时被盗，否则会报警，求盗贼一晚上在不触发警报的情况下可以盗取的最大金额数。   
+[[题解：]](https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems.)
 ```
 This particular problem and most of others can be approached using the following sequence:
 1. Find recursive relation  
@@ -132,10 +134,10 @@ int longestCommonSubsequence(string text1, string text2) {
 }
 ```
 
-### 6. 博弈问题[[来自]](https://github.com/labuladong/fucking-algorithm/blob/master/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%B3%BB%E5%88%97/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%B9%8B%E5%8D%9A%E5%BC%88%E9%97%AE%E9%A2%98.md)
+### 6. 博弈问题
 [题目链接：877. Stone Game](https://leetcode.com/problems/stone-game/)     
 给定一个数组代表有n堆石头，两个人每次只从当前数组的收尾两端进行选择，问最终是先手获得的石头多还是后手获得的石头多。   
-题解：[Optimal Strategy Game Pick from Ends of array Dynamic Programming](https://www.youtube.com/watch?v=WxpIHvsu1RI)
+[[题解：Optimal Strategy Game Pick from Ends of array Dynamic Programming]](https://www.youtube.com/watch?v=WxpIHvsu1RI)
 
 
 ### 7. 最长回文子序列
@@ -162,7 +164,7 @@ int longestPalindromeSubseq(string s) {
 ### 8. 最短编辑距离
 [题目链接：72. Edit Distance](https://leetcode.com/problems/edit-distance/)    
 给定两个字符串`s1`和`s2`，求出将`s1`转换成`s2`的最小操作次数。（共包含三种操作，插入，删除，替换）    
-题解：[C++ O(n)-space DP](https://leetcode.com/problems/edit-distance/discuss/25846/C%2B%2B-O(n)-space-DP)  
+[[题解：C++ O(n)-space DP]](https://leetcode.com/problems/edit-distance/discuss/25846/C%2B%2B-O(n)-space-DP)    
 ```c++
 int minDistance(string word1, string word2) {
     int n = word1.length(), m = word2.length();
@@ -184,6 +186,13 @@ int minDistance(string word1, string word2) {
 }
 ```
 由于状态转移只与`dp[i-1][j], dp[i-1][j-1], dp[i][j-1]`这三个状态有关，所以在整个`n*m`的DP-Table中只有其前一行和当前行是有用的，因此我们可以将空间复杂度从`O(n*m)`压缩到`O(2*min(n, m))`，然后当前行需要维护的只有`dp[i][j-1]`所以我们找一个`tmp`变量来临时存放这个值就好，从而进一步将空间复杂度降低至`O(min(n, m))`。
+
+### 9. 高楼扔鸡蛋问题
+[题目链接：887. Super Egg Drop](https://leetcode.com/problems/super-egg-drop/)    
+给你`K`个鸡蛋，`N`层的高楼，已知鸡蛋在高于某个楼层`F`的时候会摔碎，在`F`层以下抛出则不会摔碎，可以捡起来再次用于做实验，问你在最坏情况下最少做几次实验可以确定出`F`的具体数字来。   
+
+
+
 
 
 Learn More: [Dynamic Programming](https://www.geeksforgeeks.org/dynamic-programming/)   
