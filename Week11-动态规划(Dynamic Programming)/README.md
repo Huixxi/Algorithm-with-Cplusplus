@@ -163,6 +163,28 @@ int longestPalindromeSubseq(string s) {
 [题目链接：72. Edit Distance](https://leetcode.com/problems/edit-distance/)    
 给定两个字符串`s1`和`s2`，求出将`s1`转换成`s2`的最小操作次数。（共包含三种操作，插入，删除，替换）    
 题解：[C++ O(n)-space DP](https://leetcode.com/problems/edit-distance/discuss/25846/C%2B%2B-O(n)-space-DP)  
+```c++
+int minDistance(string word1, string word2) {
+    int n = word1.length(), m = word2.length();
+    // dp[i][j]代表word1[0..i-1]和word2[0..j-1]的两个字符串的最短编辑距离
+    vector<vector<int>> dp(n+1, vector<int>(m+1, 0));
+    for(int i = 0; i <= m; ++i)
+        dp[0][i] = i;
+    for(int j = 0; j <= n; ++j)
+        dp[j][0] = j;
+    for(int i = 1; i <= n; ++i) {
+        for(int j = 1; j <= m; ++j) {
+            if(word1[i-1] == word2[j-1])
+                dp[i][j] = dp[i-1][j-1];
+            else
+                dp[i][j] = min(dp[i-1][j], min(dp[i-1][j-1], dp[i][j-1])) + 1; // (delete, replace, insert)
+        }
+    }
+    return dp[n][m];
+}
+```
+由于状态转移只与`dp[i-1][j], dp[i-1][j-1], dp[i][j-1]`这三个状态有关，所以在整个`n*m`的DP-Table中只有其前一行和当前行是有用的，因此我们可以将空间复杂度从`O(n*m)`压缩到`O(2*min(n, m))`，然后当前行需要维护的只有`dp[i][j-1]`所以我们找一个`tmp`变量来临时存放这个值就好，从而进一步将空间复杂度降低至`O(min(n, m))`。
+
 
 Learn More: [Dynamic Programming](https://www.geeksforgeeks.org/dynamic-programming/)   
 
