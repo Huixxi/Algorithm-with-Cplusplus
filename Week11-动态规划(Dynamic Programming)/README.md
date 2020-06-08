@@ -189,10 +189,61 @@ int minDistance(string word1, string word2) {
 
 ### 9. 高楼扔鸡蛋问题
 [题目链接：887. Super Egg Drop](https://leetcode.com/problems/super-egg-drop/)    
-给你`K`个鸡蛋，`N`层的高楼，已知鸡蛋在高于某个楼层`F`的时候会摔碎，在`F`层以下抛出则不会摔碎，可以捡起来再次用于做实验，问你在最坏情况下最少做几次实验可以确定出`F`的具体数字来。   
-
-
-
+给你`K`个鸡蛋，`N`层的高楼，已知鸡蛋在高于某个楼层`F`的时候会摔碎，在`F`层以下抛出则不会摔碎，可以捡起来再次用于做实验，问你在最坏情况下最少做几次实验可以确定出`F`的具体数字来。       
+[[题解：官方Solution]](https://leetcode.com/problems/super-egg-drop/solution/)   
+```c++
+// 直接DP-Table -- TLE(O(KN^2))
+int superEggDrop(int K, int N) {
+    vector<vector<int>> dp(K+1, vector<int>(N+1, 0));
+    for(int i = 0; i <= N; ++i)
+        dp[1][i] = i;
+    for(int k = 2; k <= K; ++k) {
+        for(int n = 1; n <= N; ++n) {
+            dp[k][n] = INT_MAX;
+            for(int i = 1; i <= n; ++i)
+                dp[k][n] = min(dp[k][n], max(dp[k][n-i], dp[k-1][i-1]) + 1);
+        }
+    }
+    return dp[K][N]; 
+}
+```
+```c++
+// 二分搜索优化 -- 
+class Solution {
+public:
+    int superEggDrop(int K, int N) {
+        vector<vector<int>> memo(K+1, vector<int>(N+1, -1));
+        return dp(K, N, memo); 
+    }
+    
+    int dp(int K, int N, vector<vector<int>>& memo) {
+        if(K == 1)
+            return N;
+        if(N == 0)
+            return 0;
+        if(memo[K][N] != -1)
+            return memo[K][N];
+        int val = INT_MAX;
+        int lo = 1, hi = N;
+        # keep a gap of 2 X values to manually check later
+        while(lo + 1 < hi) {
+            int mid = (lo + hi) / 2;
+            int t1 = dp(K-1, mid-1, memo);  // 递增随mid
+            int t2 = dp(K, N-mid, memo);  // 递减随mid
+            if(t1 < t2) {
+                lo = mid;
+            }
+            else {
+                hi = mid;
+            }
+        }
+        for(int i = lo; i <= hi; ++i)
+            val = min(val, max(dp(K, N-i, memo), dp(K-1, i-1, memo)) + 1);
+        memo[K][N] = val;
+        return val;
+    }
+};
+```
 
 
 Learn More: [Dynamic Programming](https://www.geeksforgeeks.org/dynamic-programming/)   
