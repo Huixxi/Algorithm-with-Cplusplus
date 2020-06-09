@@ -1,5 +1,8 @@
 # 暴力算法和贪心算法
 
+
+Practice More: [Greedy for Beginners](https://leetcode.com/discuss/general-discussion/669996/greedy-for-beginners-problems-sample-solutions)
+
 **习题(暴力)：**  
 * **[**[UVa10487:Closest Sums](https://vjudge.net/problem/UVA-10487)**]** **[**[Solution(C++)][1]**]**
 * **[**[UVa750:8 Queens Chess Problem](https://vjudge.net/problem/UVA-750)**]** **[**[Solution(C++)][1]**]**
