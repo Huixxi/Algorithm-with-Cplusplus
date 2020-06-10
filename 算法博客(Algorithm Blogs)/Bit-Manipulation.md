@@ -1,4 +1,5 @@
-> From https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/tutorial/
+## Bit-Manipulation(位操作)
+From https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/tutorial/
 
 **1) How to check if a given number is a power of 2 ?**  
 * Properties for numbers which are powers of 2, is that they have one and only one bit set in their binary representation.  
