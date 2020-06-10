@@ -3,7 +3,13 @@ Bro Yu's Private Home Algorithm Cuisine.
 
 **Some tricks when coding:**  
 * `#include <bits/stdc++.h>` 
-* Placing this line in the beginning of program `ios_base::sync_with_stdio(false);` to speed up `cin` `cout`.
+* Placing this line in the beginning of program `ios_base::sync_with_stdio(false);` to speed up `cin` `cout`.  
+```c++
+int main() {
+    ios_base::sync_with_stdio(false);
+    /* ... */
+}
+```
 
 ### 刷题书籍推荐
 1. [Competitive Programmer’s Handbook(Free PDF)](https://cses.fi/book/book.pdf)
