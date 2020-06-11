@@ -8,14 +8,14 @@ void quickSort(vector<int>& nums, int low, int high) {
             while (l < h && nums[h] >= pivot)
                 --h;
             nums[l] = nums[h];
-            while (low < high && nums[low] <= pivot)
-                ++low;
-            nums[high] = nums[low];
+            while (l < h && nums[l] <= pivot)
+                ++l;
+            nums[h] = nums[l];
         }
 
-        nums[low] = pivot;
+        nums[l] = pivot;
 
-        quickSort(nums, low + 1, h);
-        quickSort(nums, l, low - 1);
+        quickSort(nums, low, l-1);
+        quickSort(nums, l+1, high);
     }
 }
