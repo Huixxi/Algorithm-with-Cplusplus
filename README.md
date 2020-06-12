@@ -7,15 +7,22 @@ Bro Yu's Private Home Algorithm Cuisine.
 using namespace std;
 
 int main() {
-    ios_base::sync_with_stdio(false);  // to speed up `cin` `cout`.
+    ios_base::sync_with_stdio(0);  // to speed up `cin` `cout`.
+    cin.tie(0);
     /* ... */
 }
 ```
+
 **Using the following command to compile the code:**   
 ```shell
 g++ -std=c++11 -O2 -Wall test.cpp -o test
 ```   
-then, `./test` to run your code.(explain: `-O2` optimizes the code, `-Wall` shows warnings about possible errors)
+then, `./test` to run your code.(explain: `-O2` optimizes the code, `-Wall` shows warnings about possible errors)   
+
+**Some tricks used in programming:**   
+* the newline `"\n"` works faster than `endl`, because `endl` always causes a flush operation.
+
+
 
 
 ### Recommended books for coding competition & tech-interview
