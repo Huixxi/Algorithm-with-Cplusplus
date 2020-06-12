@@ -12,7 +12,9 @@ int main() {
 }
 ```
 **Using the following command to compile the code:**   
-`g++ -std=c++11 -O2 -Wall test.cpp -o test`   
+```shell
+g++ -std=c++11 -O2 -Wall test.cpp -o test
+```   
 then, `./test` to run your code.(explain: `-O2` optimizes the code, `-Wall` shows warnings about possible errors)
 
 
