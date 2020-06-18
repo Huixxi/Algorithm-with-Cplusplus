@@ -1,8 +1,11 @@
 ## 字典树
 面试时候被问到了，让我计算一堆单词中，含有某个特定前缀(prefix)的单词数量有多少，下面给出一种字典树的实现：   
-参考：
+
+教程：
 * [Trie | (Insert and Search)](https://www.geeksforgeeks.org/trie-insert-and-search/)
 * [Count the number of words with given prefix using Trie](https://www.geeksforgeeks.org/count-the-number-of-words-with-given-prefix-using-trie/)
+
+算法题：
 * [LeetCode 208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
 
 ```c++
