@@ -1,15 +1,18 @@
 class Solution {
 public:
     int MoreThanHalfNum_Solution(vector<int> numbers) {
-        map<int, int> mm;
-        for(auto& i : numbers) {
-            if(mm.find(i) != mm.end())
-                ++mm[i];
-            else
-                mm[i] = 1;
-            if(mm[i] > numbers.size() / 2)
-                return i;
+        // the most direct method is to use a map to count, but ..
+        int majority = numbers[0], cnt = 1;
+        for(int i = 1; i < numbers.size(); ++i) {
+            if(numbers[i] == majority)   
+                ++cnt;
+            else {
+                if(--cnt == 0) {
+                    majority = numbers[i];
+                    cnt = 1;
+                }
+            }
         }
-        return 0;
+        return majority;
     }
 };
