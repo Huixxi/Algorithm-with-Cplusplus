@@ -3,8 +3,9 @@ Sometimes a straightforward analysis does not give a true picture of the efficie
 
 ## Corresponding Problems on LeetCode
 * Two pointers method
-  * [713. Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/)
   * [1. Two Sum](https://leetcode.com/problems/two-sum/)
+  * [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+  * [713. Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/)
 * Nearest smaller elements
   * Solve it with stack.
 * Sliding window minimum
