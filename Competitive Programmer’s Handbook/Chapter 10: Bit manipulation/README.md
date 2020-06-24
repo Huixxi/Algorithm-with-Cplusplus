@@ -21,5 +21,5 @@
   * Counting Subgrids: [750. Number Of Corner Rectangles -- Google](https://leetcode.com/problems/number-of-corner-rectangles/)
 * Dynamic Programming
   * Optimal selection
-  * From permutations to subsets
+  * From permutations to subsets: Using dynamic programming, it is often possible to change an iteration over permutations into an iteration over subsets, that change reduce `n!` to `2^n`. 
   * Counting subsets
