@@ -10,6 +10,6 @@
 | **`coloring(图的上色)`** | **`bipartite(二分图/偶图，不含奇圈)`** | **`simple graph(简单图，不含重边和子环)`** |   
 
 ## Graph representation
-* Adjacency list representation: `vector<int> adj[N];` | `vector<pair<int,int>> adj[N];  // weighted graph
+* Adjacency list representation: `vector<int> adj[N];` | `vector<pair<int,int>> adj[N];  // weighted graph`
 * Adjacency matrix representation: `int adj[N][N];  // 0/1 or weights`
 * Edge list representation: `vector<pair<int,int>> edges;` | `vector<tuple<int,int,int>> edges;  // weighted graph`
