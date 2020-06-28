@@ -37,3 +37,8 @@ of the tree is the distance between `b` and `c` .
 
 ## All Longest Paths
 To calculate for every node in the tree the maximum length of a path that begins at the node.
+* First, to calculate for every node `x` the maximum length of a path from `x` that goes through a child of `x`.  
+* Second, to calculate for every node `x` the maximum length of a path through its parent `p`.
+  * `maxLength1(x)`: the maximum length of a path from `x`
+  * `maxLength2(x)`: the maximum length of a path from `x` in another direction than the first path
+* Finally, if the path that corresponds to `maxLength1(p)` goes through `x` , we conclude that the maximum length is `maxLength2(p) + 1`, and otherwise the maximum length is `maxLength1(p) + 1`.
