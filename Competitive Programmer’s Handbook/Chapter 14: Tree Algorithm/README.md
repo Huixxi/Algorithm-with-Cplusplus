@@ -2,7 +2,7 @@
 * [Dynamic Programming on Trees | Set-1 (Maximum Sum of the Node Values from Root to Any of the Leaves)](https://www.geeksforgeeks.org/dynamic-programming-trees-set-1/)
 * [Dynamic Programming on Trees | Set 2 (Maximum Height of Tree for Each Node as a Root)](https://www.geeksforgeeks.org/dynamic-programming-trees-set-2/)
 * [Dynamic Programming on Trees | Set-3 (Diameter of N-ary Tree)](https://www.geeksforgeeks.org/dp-on-trees-set-3-diameter-of-n-ary-tree/)
-* [Diameter of a tree using Two DFS](https://www.geeksforgeeks.org/diameter-tree-using-dfs/)
+* [Diameter of a Tree Using Two DFS](https://www.geeksforgeeks.org/diameter-tree-using-dfs/)
 
 ## Tree traversal
 ```c++
