@@ -5,7 +5,7 @@
 2 4
 2 5
 
-output: 4
+output: 3
 */
 #include <bits/stdc++.h>
 using namespace std;
