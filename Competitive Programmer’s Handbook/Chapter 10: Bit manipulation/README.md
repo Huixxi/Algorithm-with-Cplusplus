@@ -10,6 +10,8 @@
   * Set all the `1` bits to `0`, except for the last `1` bit: `x & -x`, e.g `1101` to `0001`
   * Invert all the bits after the last `1` bit: `x | (x − 1)`, e.g `10100` to `10111`
   * Check a positive number `x` is a power of two: `x & (x - 1) == 0`
+  * Average of two numbers: `(x & y) + ((x ^ y) >> 1)`
+  * Sum of two numbers: `sum = a ^ b; carry = (a & b) << 1;`
 * Representing Sets: `int x = (1<<1)|(1<<3)|(1<<4)|(1<<8);  // 1 3 4 8`
   * Intersection: `a & b`
   * Union: `a | b`
