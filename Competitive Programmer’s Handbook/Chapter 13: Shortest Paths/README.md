@@ -23,7 +23,7 @@ The algorithm maintains a queue of nodes that might be used for reducing the dis
 ## Dijkstra’s Algorithm(`O(n + mlogm)`)
 Dijkstra’s algorithm finds shortest paths from the starting node to all nodes of the graph, that it is more efficient and can be used for processing large graphs, but remember that the algorithm requires there are no negative weight edges in the graph.   
 ```c++
-priority_queue<int> q;
+priority_queue<pair<int, int>> q;
 for (int i = 1; i <= n; i++) distance[i] = INF;
 distance[x] = 0;
 q.push({0,x});
