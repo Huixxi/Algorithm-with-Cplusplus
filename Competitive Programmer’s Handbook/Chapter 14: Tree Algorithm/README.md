@@ -4,6 +4,9 @@
 * [Dynamic Programming on Trees | Set-3 (Diameter of N-ary Tree)](https://www.geeksforgeeks.org/dp-on-trees-set-3-diameter-of-n-ary-tree/)
 * [Diameter of a Tree Using Two DFS](https://www.geeksforgeeks.org/diameter-tree-using-dfs/)
 
+## Corresponding Problems on LeetCode
+* [310. Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/)
+
 ## Tree traversal
 ```c++
 // dfs at an arbitrary node
