@@ -91,7 +91,6 @@ int main() {
     int n;
     cin >> n;
     vector<int> adj[n + 1];
-    vector<int> val(n + 1, 0);
     int p, c;
     for(int i = 1; i < n; ++i) {
         cin >> p >> c;
