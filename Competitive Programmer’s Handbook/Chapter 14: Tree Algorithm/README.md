@@ -5,6 +5,7 @@
 * [Diameter of a Tree Using Two DFS](https://www.geeksforgeeks.org/diameter-tree-using-dfs/)
 
 ## Corresponding Problems on LeetCode
+* [124. Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 * [310. Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/)
 
 ## Tree traversal
