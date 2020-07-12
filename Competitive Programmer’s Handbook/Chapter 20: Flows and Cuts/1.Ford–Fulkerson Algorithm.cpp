@@ -29,9 +29,7 @@ output: 7
 using namespace std;
 
 // Edmonds–Karp algorithm(BFS)
-bool bfs(vector<vector<int>>& adj, int s, int t, vector<int>& parent) {
-    int V = adj.size();
-    vector<bool> visited(V, false);
+bool bfs(vector<vector<int>>& adj, vector<bool>& visited, int s, int t, vector<int>& parent) {
     queue<int> q;
     q.push(s);
 
@@ -40,7 +38,7 @@ bool bfs(vector<vector<int>>& adj, int s, int t, vector<int>& parent) {
     while(!q.empty()) {
         int u = q.front();
         q.pop();
-        for(int v = 0; v < V; ++v) {
+        for(int v = 0; v < adj.size(); ++v) {
             int w = adj[u][v];
             if(!visited[v] && w > 0) {
                 q.push(v);
@@ -53,10 +51,11 @@ bool bfs(vector<vector<int>>& adj, int s, int t, vector<int>& parent) {
 }
 
 void ford_fulkerson(int n, vector<vector<int>>& adj, int source, int sink) {
+    vector<bool> visited(n, false);
     vector<int> parent(n, -1);
 
     int u, v, max_flow = 0;
-    while(bfs(adj, source, sink, parent)) {
+    while(bfs(adj, visited, source, sink, parent)) {
         int path_flow = INT_MAX;
         for(v = sink; v != source; v = parent[v]) {
             u = parent[v];
@@ -68,9 +67,30 @@ void ford_fulkerson(int n, vector<vector<int>>& adj, int source, int sink) {
             adj[v][u] += path_flow;
         }
         max_flow += path_flow;
+        visited = vector<bool>(n, false);
     }
     cout << max_flow << endl;
 }
+
+void minimum_cut(int n, vector<vector<int>>& adj, int source, int sink) {
+    vector<bool> visited(n, false);
+    vector<int> parent(n, -1);
+
+    int u, v;
+    bfs(adj, visited, source, sink, parent);
+    vector<pair<int, int>> minCut;
+    for(u = 0; u < n; ++u) {
+        if(visited[u]) {
+            for(v = 0; v < n; ++v) {
+                if(!visited[v] && adj[u][v] == 0 && adj[v][u] > 0)
+                    minCut.push_back({u, v});
+            }
+        }
+    }
+    for(auto p : minCut)
+        cout << p.first << "--" << p.second << endl;
+}
+
 
 int main() {
     auto r = freopen("input.txt", "r", stdin);
@@ -82,6 +102,6 @@ int main() {
         adj[s][t] = w;
     
     ford_fulkerson(n, adj, source, sink);
-
+    minimum_cut(n, adj, source, sink);
     return 0;
 }
