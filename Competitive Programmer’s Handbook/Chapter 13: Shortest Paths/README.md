@@ -3,6 +3,7 @@
 ## Corresponding Problems on LeetCode
 * [787. Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
 * [568. Maximum Vacation Days](https://xinjiema.gitbooks.io/leetcode/maximum-vacation-days.html)
+* [1514. Path with Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability/)
 
 ## Bellman-Ford Algorithm(`O(nm)`)
 The **Bellman–Ford algorithm** finds shortest paths from a starting node to all nodes of the graph. The algorithm can process all kinds of graphs, provided that the graph does not contain a cycle with negative length. If the graph contains a negative cycle, the algorithm can detect this. The algorithm reduces the distances by finding edges that shorten the paths until it is not possible to reduce any distance. If there are no negative cycles in the graph, all distances are final after `n − 1` rounds, because each shortest path can contain at most `n − 1` edges. A negative cycle can be detected using the Bellman–Ford algorithm by running the algorithm for `n` rounds.   
