@@ -74,7 +74,15 @@ output: 0 0 0 2 0 0 5 0 0 7 0 0 2 0 0 1
 ### Using the Z-array to solve the "pattern matching problem"
 For example, if `s = HATTIVATTI` and `p = ATT`, we first construct a new string `p#s` that `ATT#HATTIVATTI`, then we use the Z-algorithm to get the Z-array of this new string.
 
-
+## Combine String Hashing and Binary Search
+1. Searching all occurrences of one string of length `n` in another string length `m` in `O(n + m)` time.
+2. Searching for the largest common substring of two strings of lengths `n` and `m` (`n ≥ m`) in `O((n + m·log(n))·log(m))` and `O(n·log(m))` time.
+3. Finding the lexicographically minimal cyclic shift of a string of length `n` in `O(n·log(n))` time.
+4. Sorting of all cyclic shifts of a string of length `n` in lexicographic order in `O(n·log(n)^2)` time.
+5. Finding the number of sub-palindromes of a string of length `n` in `O(n·log(n))` time.
+6. The number of substrings of string of length `n` that are cyclic shifts of the another string length `m` in `O((n + m)·log(n))` time.
+7. The number of suffixes of a string of length `n`, the infinite extension of which coincides with the infinite extension of the given string for `O(n·log(n))` (extension is a duplicate string an infinite number of times).
+8. Largest common prefix of two strings length `n` with swapping two chars in one of them `O(n·log(n))`.
 
 ## Reference
 1. [[Tutorial] Rolling hash and 8 interesting problems [Editorial]](https://codeforces.com/blog/entry/60445)
