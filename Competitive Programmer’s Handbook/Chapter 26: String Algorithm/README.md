@@ -74,7 +74,7 @@ output: 0 0 0 2 0 0 5 0 0 7 0 0 2 0 0 1
 ### Using the Z-array to solve the "pattern matching problem"
 For example, if `s = HATTIVATTI` and `p = ATT`, we first construct a new string `p#s` that `ATT#HATTIVATTI`, then we use the Z-algorithm to get the Z-array of this new string.
 
-## Combine String Hashing and Binary Search
+## Combine String Hashing with Binary Search
 1. Searching all occurrences of one string of length `n` in another string length `m` in `O(n + m)` time.
 2. Searching for the largest common substring of two strings of lengths `n` and `m` (`n ≥ m`) in `O((n + m·log(n))·log(m))` and `O(n·log(m))` time.
 3. Finding the lexicographically minimal cyclic shift of a string of length `n` in `O(n·log(n))` time.
