@@ -9,13 +9,13 @@ We assume that zero-based indexing is used in strings. Strings are compared usin
 * **Period**: a prefix of a string such that the string can be constructed by repeating the period.
 * **Border**: a string that is both a prefix and a suffix of a string.
 
-## Trie structure
+## Trie Structure
 Using a trie, we can find the **longest prefix** of a given string such that the prefix belongs to the set. Moreover, by storing additional information in each
 node, we can calculate the number of strings that belong to the set and have a given string as a prefix.
 
 ## String Hashing
 String hashing is a technique that allows us to efficiently check whether two strings are equal.
-### Calculating hash values
+### Calculating Hash Values
 A usual way to implement string hashing is **polynomial hashing**, which means that the hash value of a string `s` of length `n` is
 $$
 (s[0] A^{n − 1} + s[1] A^(n − 2) + · · · + s[n − 1] A^0) mod B
@@ -39,11 +39,40 @@ for(int i = n-2; i >= 0; --i) {
 }
 // p: [1, A, A^2, ... A^{n-1}]
 ```
-After this, the hash value of any substring `s[a . . . b]` can be calculated in `O(1)` time using the formula:    
+After this, the hash value of any substring `s[a ... b]` can be calculated in `O(1)` time using the formula:    
 ```c++
 (h[b] - h[a-1] * p[a-1]) % B;
 ```
 
+### Collisions and Parameters
+An evident risk when comparing hash values is a **collision**, which means that two strings have different contents but equal hash values. Collisions are always possible, because the number of different strings is larger than the number of different hash values. We can choose A and B carefully: tochoose random constants near `10^9` , for example as follows: `A = 911382323, B = 972663749`, and then use a `long long` type to contain to hash value. Also, we can make the probability of a collision smaller by calculating **multiple hash values** using different parameters.
+
+## Z-Algorithm
+The **Z-array** `z` of a string `s` of length `n` contains for each `k = 0, 1, ... , n − 1` the length of the longest substring of `s` that begins at position `k` and is a prefix of `s`. Thus, `z[k] = p` tells us that `s[0 ... p−1]` equals `s[k ... k+p−1]`.
+
+### Algorithm Description
+**Z-algorithm**, that efficiently constructs the Z-array in `O(n)` time. At each position `k`, we first check the value of `z[k − x]`. If `k + z[k − x] < y`, we
+know that `z[k] = z[k − x]`. However, if `k + z[k − x] ≥ y`, `s[0 ... y − k]` equals `s[k ... y]`, and to determine the value of `z[k]` we need to compare the substrings character by character.
+```c++
+vector<int> zAlgorithm(string s) {
+    int n = s.length();
+    vector<int> z(n);
+    int x = 0, y = 0;
+    for(int k = 1; k < n; ++k) {
+        z[k] = max(0, min(z[k-x], y-k+1));  // 0 -- i-x -- x -- i -- y
+        while(k + z[k] < n && s[z[k]] == s[k + z[k]]) {
+            x = k; y = k + z[k]; ++z[k];
+        }
+    }
+    return z;
+}
+/*
+input: ACBACDACBACBACDA
+output: 0 0 0 2 0 0 5 0 0 7 0 0 2 0 0 1  
+*/
+```
+### Using the Z-array to solve the "pattern matching problem"
+For example, if `s = HATTIVATTI` and `p = ATT`, we first construct a new string `p#s` that `ATT#HATTIVATTI`, then we use the Z-algorithm to get the Z-array of this new string.
 
 
 
