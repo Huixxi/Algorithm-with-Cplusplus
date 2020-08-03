@@ -85,7 +85,7 @@ For example, if `s = HATTIVATTI` and `p = ATT`, we first construct a new string 
 ## Combine String Hashing with Binary Search
 ```c++
 /* 
-Source Code: https://ideone.com/8fDG3W 
+Changing the Polynomial Hash Function From the Source Code: https://ideone.com/8fDG3W, 
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -134,13 +134,106 @@ vector<int> PolyHash::pow1{1};
 vector<ull> PolyHash::pow2{1};
 ```
 1. Searching all occurrences of one string of length `n` in another string length `m` in `O(n + m)` time.
+```c++
+int main() {
+    auto r = freopen("input.txt", "r", stdin);
+    string s, t;
+    cin >> s >> t;
+    PolyHash::base = gen_base(256, PolyHash::mod);
+    PolyHash hash_s(s), hash_t(t);
+    int l = t.length(), ls = s.length();
+    const auto need = hash_t(0, l);
+    for(int i = 0; i + l <= ls; ++i) {
+        if(hash_s(i, l) == need)
+            cout << i << " ";
+    }
+    return 0;
+}
+/*
+input:
+ababbababa
+aba
+output:
+0 5 7
+*/
+```
 2. Searching for the largest common substring of two strings of lengths `n` and `m` (`n ≥ m`) in `O((n + m·log(n))·log(m))` and `O(n·log(m))` time.
+```c++
+int main() {
+    auto r = freopen("input.txt", "r", stdin);
+    string s1, s2;
+    cin >> s1 >> s2;
+    // make sure that s1.length() < s2.length()
+    if(s1.length() > s2.length()) {
+        string tmp = s1;
+        s1 = s2; s2 = tmp;
+    }
+    PolyHash::base = gen_base(256, PolyHash::mod);
+    PolyHash hash_s1(s1), hash_s2(s2);
+    int m = s1.length(), n = s2.length();
+
+    // Binary search by length of same subsequence:
+    int pos = -1, low = 0, high = m + 1;
+    while(low < high - 1) {
+        int mid = (low + high) / 2;
+        vector<pair<int,ull>> hashes;
+        for(int i = 0; i + mid <= m; ++i) {
+            hashes.push_back(hash_s1(i, mid));
+        }
+        sort(hashes.begin(), hashes.end());
+        int p = -1;
+        for(int i = 0; i + mid <= n; ++i) {
+            if(binary_search(hashes.begin(), hashes.end(), hash_s2(i, mid))) {
+                p = i;
+                break;
+            }
+        }
+        if(p >= 0) {
+            low = mid;
+            pos = p;
+        } 
+        else {
+            high = mid;
+        }
+    }
+    assert(pos >= 0);
+    // Output answer:
+    printf("%s", s2.substr(pos, low).c_str());
+    
+    return 0;
+}
+/*
+input:
+VOTEFORTHEGREATALBANIAFORYOU
+CHOOSETHEGREATALBANIANFUTURE
+output:
+THEGREATALBANIA
+*/
+```
 3. Finding the lexicographically minimal cyclic shift of a string of length `n` in `O(n·log(n))` time.
+```c++
+
+```
 4. Sorting of all cyclic shifts of a string of length `n` in lexicographic order in `O(n·log(n)^2)` time.
+```c++
+
+```
 5. Finding the number of sub-palindromes of a string of length `n` in `O(n·log(n))` time.
+```c++
+
+```
 6. The number of substrings of string of length `n` that are cyclic shifts of the another string length `m` in `O((n + m)·log(n))` time.
+```c++
+
+```
 7. The number of suffixes of a string of length `n`, the infinite extension of which coincides with the infinite extension of the given string for `O(n·log(n))` (extension is a duplicate string an infinite number of times).
+```c++
+
+```
 8. Largest common prefix of two strings length `n` with swapping two chars in one of them `O(n·log(n))`.
+```c++
+
+```
 
 ## Reference
 1. [[Tutorial] Rolling hash and 8 interesting problems [Editorial]](https://codeforces.com/blog/entry/60445)
