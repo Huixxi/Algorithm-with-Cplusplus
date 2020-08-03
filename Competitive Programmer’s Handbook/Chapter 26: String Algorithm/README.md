@@ -17,9 +17,7 @@ node, we can calculate the number of strings that belong to the set and have a g
 String hashing is a technique that allows us to efficiently check whether two strings are equal.
 ### Calculating Hash Values
 A usual way to implement string hashing is **polynomial hashing**, which means that the hash value of a string `s` of length `n` is
-$$
-(s[0] A^{n − 1} + s[1] A^(n − 2) + · · · + s[n − 1] A^0) mod B
-$$
+$$ (s[0] A^{n − 1} + s[1] A^(n − 2) + · · · + s[n − 1] A^0) mod B $$
 where `s[0], s[1], . . . , s[n − 1]` are interpreted as the codes of the characters of `s` , and `A` and `B` are pre-chosen constants.
 
 ### Preprocessing
@@ -33,15 +31,15 @@ for(int i = 1; i < n; ++i) {
     h[i] = (h[i-1] * A + s[i]) % B;
 } 
 int p[n];  // p[k] = A^k mod B
-p[n-1] = 1;
-for(int i = n-2; i >= 0; --i) {
-    p[i] = (p[i+1] * A) % B;
+p[0] = 1;
+for(int i = 1; i < n; --i) {
+    p[i] = (p[i-1] * A) % B;
 }
 // p: [1, A, A^2, ... A^{n-1}]
 ```
 After this, the hash value of any substring `s[a ... b]` can be calculated in `O(1)` time using the formula:    
 ```c++
-(h[b] - h[a-1] * p[a-1]) % B;
+(h[b] - h[a-1] * p[b-a+1]) % B;
 ```
 
 ### Collisions and Parameters
@@ -86,3 +84,6 @@ For example, if `s = HATTIVATTI` and `p = ATT`, we first construct a new string 
 
 ## Reference
 1. [[Tutorial] Rolling hash and 8 interesting problems [Editorial]](https://codeforces.com/blog/entry/60445)
+2. [On the mathematics behind rolling hashes and anti-hash tests](https://codeforces.com/blog/entry/60442)
+
+
