@@ -83,6 +83,56 @@ output: 0 0 0 2 0 0 5 0 0 7 0 0 2 0 0 1
 For example, if `s = HATTIVATTI` and `p = ATT`, we first construct a new string `p#s` that `ATT#HATTIVATTI`, then we use the Z-algorithm to get the Z-array of this new string.
 
 ## Combine String Hashing with Binary Search
+```c++
+/* 
+Source Code: https://ideone.com/8fDG3W 
+*/
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef unsigned long long ull;
+
+// Generate random base in (before, after) open interval:
+int gen_base(const int before, const int after) {
+    auto seed = std::chrono::high_resolution_clock::now().time_since_epoch().count();
+    mt19937 mt_rand(seed);
+    int base = uniform_int_distribution<int>(before + 1, after)(mt_rand);
+    return base % 2 == 0 ? base - 1 : base;  // odd number
+}
+
+struct PolyHash {
+    static const int mod = (int)1e9 + 123;  // prime mod of polynomial hashing
+    static vector<int> pow1;
+    static vector<ull> pow2;
+    static int base;
+
+    vector<int> perf1;
+    vector<ull> perf2;
+
+    PolyHash(const string& s) : perf1(s.length() + 1u, 0) , perf2(s.length() + 1u, 0) {
+        assert(base < mod);
+        const int n = s.length();
+        while((int)pow1.size() <= n) {
+            pow1.push_back(1LL * pow1.back() * base % mod);
+            pow2.push_back(pow2.back() * base);  // always smaller than 2^64-1
+        }
+        for(int i = 0; i < n; ++i) {
+            perf1[i+1] = (1LL * perf1[i] * base + s[i]) % mod;
+            perf2[i+1] = perf2[i] * base + s[i];
+        }
+    }
+
+    inline pair<int, ull> operator()(const int pos, const int len) {
+        int hash1 = (perf1[pos + len] - 1LL * perf1[pos] * pow1[len] % mod + mod) % mod;
+        ull hash2 = perf2[pos + len] - perf2[pos] * pow2[len];
+        return make_pair(hash1, hash2);
+    }
+};
+
+int PolyHash::base((int)1e9+7);
+vector<int> PolyHash::pow1{1};
+vector<ull> PolyHash::pow2{1};
+```
 1. Searching all occurrences of one string of length `n` in another string length `m` in `O(n + m)` time.
 2. Searching for the largest common substring of two strings of lengths `n` and `m` (`n ≥ m`) in `O((n + m·log(n))·log(m))` and `O(n·log(m))` time.
 3. Finding the lexicographically minimal cyclic shift of a string of length `n` in `O(n·log(n))` time.
