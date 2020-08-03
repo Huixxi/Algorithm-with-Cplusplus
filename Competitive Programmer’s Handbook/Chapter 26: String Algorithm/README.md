@@ -32,7 +32,7 @@ for(int i = 1; i < n; ++i) {
 } 
 int p[n];  // p[k] = A^k mod B
 p[0] = 1;
-for(int i = 1; i < n; --i) {
+for(int i = 1; i < n; ++i) {
     p[i] = (p[i-1] * A) % B;
 }
 // p: [1, A, A^2, ... A^{n-1}]
