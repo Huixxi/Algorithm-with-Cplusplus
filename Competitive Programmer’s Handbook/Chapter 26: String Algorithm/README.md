@@ -23,19 +23,29 @@ where `s[0], s[1], . . . , s[n − 1]` are interpreted as the codes of the chara
 ### Preprocessing
 Using polynomial hashing, we can calculate the hash value of any substring of a string s in `O(1)` time after an `O(n)` time preprocessing.
 ```c++
-string s = "ABCDEABC";
-int n = s.length();
-int h[n];  // h[k] contains the hash value of the prefix s[0...k]
-h[0] = s[0];
-for(int i = 1; i < n; ++i) {
-    h[i] = (h[i-1] * A + s[i]) % B;
+string s = "ABCDEABCCCCABCDE", t = "ABC";
+int A = 911382323, B = 972663749;
+int n = s.length(), m = t.length();
+int h[n + 1];  // h[k] contains the hash value of the prefix s[0...k], i.e. [0, k)
+h[0] = 0;
+for(int i = 0; i < n; ++i) {
+    h[i + 1] = (1LL * h[i] * A + s[i]) % B;
+} 
+int need = t[0];
+for(int i = 1; i < m; ++i) {
+    need = (1LL * need * A + t[i]) % B;
 } 
 int p[n];  // p[k] = A^k mod B
 p[0] = 1;
 for(int i = 1; i < n; ++i) {
-    p[i] = (p[i-1] * A) % B;
+    p[i] = (1LL * p[i-1] * A) % B;
 }
 // p: [1, A, A^2, ... A^{n-1}]
+
+for(int i = 0; i <= n - m; ++i) {
+    if((h[i + m] - 1LL * h[i] * p[m] % B + B) % B == need)
+        cout << i << " ";
+}
 ```
 After this, the hash value of any substring `s[a ... b]` can be calculated in `O(1)` time using the formula:    
 ```c++
