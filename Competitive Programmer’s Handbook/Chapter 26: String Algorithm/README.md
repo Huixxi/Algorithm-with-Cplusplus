@@ -212,7 +212,40 @@ THEGREATALBANIA
 ```
 3. Finding the lexicographically minimal cyclic shift of a string of length `n` in `O(n·log(n))` time.
 ```c++
+int main() {
+    auto r = freopen("input.txt", "r", stdin);
+    string a;
+    cin >> a;
+    int n = a.length();
+    a += a;
+    PolyHash::base = gen_base(256, PolyHash::mod);
+    PolyHash hash(a);
 
+    vector<int> pos(n);
+    for(int i = 0; i < n; ++i) {
+        pos[i] = i;
+    }
+
+    auto p = min_element(pos.begin(), pos.end(), [&](const int p1, const int p2){
+        // Binary search by length of same subsequence to find the first different character:
+        int low = 0, high = n + 1;
+        while(low < high - 1) {
+            int mid = (low + high) / 2;
+            if(hash(p1, mid) == hash(p2, mid)) {
+                low = mid;
+            } 
+            else {
+                high = mid;
+            }
+        }
+        return low < n && a[p1 + low] < a[p2 + low];
+    });
+    
+    // Output answer:
+    printf("%s", a.substr(*p, n).c_str());
+    
+    return 0;
+}
 ```
 4. Sorting of all cyclic shifts of a string of length `n` in lexicographic order in `O(n·log(n)^2)` time.
 ```c++
