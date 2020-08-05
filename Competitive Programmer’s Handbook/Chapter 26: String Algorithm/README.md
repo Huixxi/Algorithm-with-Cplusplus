@@ -246,6 +246,12 @@ int main() {
     
     return 0;
 }
+/*
+input:
+program
+output:
+amprogr
+*/
 ```
 4. Sorting of all cyclic shifts of a string of length `n` in lexicographic order in `O(n·log(n)^2)` time.
 ```c++
@@ -253,7 +259,56 @@ int main() {
 ```
 5. Finding the number of sub-palindromes of a string of length `n` in `O(n·log(n))` time.
 ```c++
+int main() {
+    auto r = freopen("input.txt", "r", stdin);
+    string a;
+    cin >> a;
+    int n = a.length();
+    string b(a);
+    reverse(b.begin(), b.end());
 
+    PolyHash::base = gen_base(256, PolyHash::mod);
+    PolyHash hash_a(a), hash_b(b);
+
+    ull answ = 0;
+    for (int i = 0, j = n - 1; i < n; ++i, --j) {
+        // Palindromes odd length:
+        int low = 0, high = min(n-i, n-j) + 1;
+        while (high - low > 1) {
+            int mid = (low + high) / 2;
+            if (hash_a(i, mid) == hash_b(j, mid)) {
+                low = mid;
+            } else {
+                high = mid;
+            }
+        }
+        answ += low;
+        // Palindromes even length:
+        low = 0, high = std::min(n-i-1, n-j)+1;
+        while (high - low > 1) {
+            int mid = (low + high) / 2;
+            if (hash_a(i+1, mid) == hash_b(j, mid)) {
+                low = mid;
+            } else {
+                high = mid;
+            }
+        }
+        answ += low;
+    }
+    std::cout << answ;
+    
+    return 0;
+}
+/*
+input:
+AAAA
+ABRACADABRA
+ABACABADABACABA
+output:
+10
+13
+32
+*/
 ```
 6. The number of substrings of string of length `n` that are cyclic shifts of the another string length `m` in `O((n + m)·log(n))` time.
 ```c++
