@@ -4,4 +4,5 @@
 3. [Intervals Intersection (medium) -- LeetCode](https://leetcode.com/problems/interval-list-intersections/)
 4. [Conflicting Appointments (medium) -- GeeksforGeeks](https://www.geeksforgeeks.org/given-n-appointments-find-conflicting-appointments/)
 5. [Non-overlapping Intervals (medium) -- LeetCode](https://leetcode.com/problems/non-overlapping-intervals/)
- 
+6. [Data Stream as Disjoint Intervals -- LeetCode](https://leetcode.com/problems/data-stream-as-disjoint-intervals/)
+7. [Range Module -- LeetCode](https://leetcode.com/problems/range-module/)
