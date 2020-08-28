@@ -7,3 +7,5 @@
 6. [Longest Substring with Same Letters after Replacement (medium, amazon) -- GeeksforGeeks](https://practice.geeksforgeeks.org/problems/maximum-sub-string-after-at-most-k-changes/0)
 7. [Longest Subarray with Ones after Replacement (medium) -- GeeksforGeeks](https://www.geeksforgeeks.org/longest-subsegment-1s-formed-changing-k-0s/)
 8. [Sliding Window Maximum (hard) -- LeetCode](https://leetcode.com/problems/sliding-window-maximum/)
+9. [Shortest Subarray with Sum at Least K (hard) -- LeetCode](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/)
+10. [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)
