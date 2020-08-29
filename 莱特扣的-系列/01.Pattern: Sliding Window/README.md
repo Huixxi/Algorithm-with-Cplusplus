@@ -9,3 +9,5 @@
 8. [Sliding Window Maximum (hard) -- LeetCode](https://leetcode.com/problems/sliding-window-maximum/)
 9. [Shortest Subarray with Sum at Least K (hard) -- LeetCode](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/)
 10. [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)
+11. [Replace the Substring for Balanced String (medium) -- LeetCode](https://leetcode.com/problems/replace-the-substring-for-balanced-string/)
+12. [Count Number of Nice Subarrays (medium) -- LeetCode](https://leetcode.com/problems/count-number-of-nice-subarrays/)
