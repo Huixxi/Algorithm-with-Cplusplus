@@ -5,3 +5,7 @@ Sep 1: DFS
 Sep 2: DP
 * [312. Burst Balloons](https://leetcode.com/problems/burst-balloons/)
 * [1000. Minimum Cost to Merge Stones](https://leetcode.com/problems/minimum-cost-to-merge-stones/)
+
+Sep 3: DP & Union Find
+* [712. Minimum ASCII Delete Sum for Two Strings](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/)
+* [947. Most Stones Removed with Same Row or Column](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/)
