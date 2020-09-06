@@ -14,6 +14,6 @@ Sep 4: Ordered Set & Tree
 * [218. The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
 * [1325. Delete Leaves With a Given Value](https://leetcode.com/problems/delete-leaves-with-a-given-value/)
 
-Sep 5: Array
+Sep 5: Array & DP
 * [1054. Distant Barcodes](https://leetcode.com/problems/distant-barcodes/)
 * [1074. Number of Submatrices That Sum to Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/)
