@@ -17,3 +17,7 @@ Sep 4: Ordered Set & Tree
 Sep 5: Array & DP
 * [1054. Distant Barcodes](https://leetcode.com/problems/distant-barcodes/)
 * [1074. Number of Submatrices That Sum to Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/)
+
+Sep 6: Trial and Error & DP
+* [719. Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/)
+* [1420. Build Array Where You Can Find The Maximum Exactly K Comparisons](https://leetcode.com/problems/build-array-where-you-can-find-the-maximum-exactly-k-comparisons/)
