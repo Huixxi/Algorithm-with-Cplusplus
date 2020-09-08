@@ -22,3 +22,6 @@ Sep 6: Trial and Error & DP
 * [373. Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/submissions/)
 * [719. Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/)
 
+Sep 7: DFS & DP
+* [93. Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/)
+* [1473. Paint House III](https://leetcode.com/problems/paint-house-iii/)
