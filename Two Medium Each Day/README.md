@@ -25,3 +25,7 @@ Sep 6: Trial and Error & DP
 Sep 7: DFS & DP
 * [93. Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/)
 * [1473. Paint House III](https://leetcode.com/problems/paint-house-iii/)
+
+Sep 8: Binary Search
+* [718. Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
+* [778. Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
