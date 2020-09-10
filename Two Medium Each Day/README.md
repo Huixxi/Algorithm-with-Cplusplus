@@ -29,3 +29,7 @@ Sep 7: DFS & DP
 Sep 8: Binary Search
 * [718. Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
 * [778. Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
+
+Sep 9: 
+* [134. Gas Station](https://leetcode.com/problems/gas-station/)
+* [135. Candy](https://leetcode.com/problems/candy/)
