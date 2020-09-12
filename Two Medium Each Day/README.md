@@ -30,6 +30,12 @@ Sep 8: Binary Search
 * [718. Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
 * [778. Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
 
-Sep 9: 
+Sep 9: Greedy
 * [134. Gas Station](https://leetcode.com/problems/gas-station/)
 * [135. Candy](https://leetcode.com/problems/candy/)
+
+Sep 10: 
+* [1262. Greatest Sum Divisible by Three](https://leetcode.com/problems/greatest-sum-divisible-by-three/)
+* [1371. Find the Longest Substring Containing Vowels in Even Counts](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/)
+
+
