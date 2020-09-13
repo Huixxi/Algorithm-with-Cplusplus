@@ -3,6 +3,7 @@ A spanning tree of a graph consists of all nodes of the graph and some of the ed
 
 ## Corresponding Problems on LeetCode
 * [Min Cost to Connect All Nodes](https://leetcode.com/discuss/interview-question/356981/amazon-oa-2019-min-cost-to-connect-all-nodes)
+* [Minimum cost to connect all cities](https://www.geeksforgeeks.org/minimum-cost-connect-cities/)
 
 ## Kruskal’s Algorithm(e.g. to create a minimum spanning tree)
 * Sort the edges by their weights
