@@ -3,6 +3,7 @@
 ## Corresponding Problems on LeetCode
 * [785. Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/)
 * [Check whether a given graph is Bipartite or not](https://www.geeksforgeeks.org/bipartite-graph/#:~:text=In%20other%20words%2C%20for%20every,colored%20with%20the%20same%20color.)
+* [Check if a directed graph is connected or not](https://www.geeksforgeeks.org/check-if-a-directed-graph-is-connected-or-not/)
 
 ## Graph terminology
 | **`node(节点)`** | **`edge(边)`** | **`path(路径)`** | **`cycle(环)`** | **`simple path(简单路径)`**  
