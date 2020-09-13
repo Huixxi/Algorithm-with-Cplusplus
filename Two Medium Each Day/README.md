@@ -34,7 +34,7 @@ Sep 9: Greedy
 * [134. Gas Station](https://leetcode.com/problems/gas-station/)
 * [135. Candy](https://leetcode.com/problems/candy/)
 
-Sep 10: 
+Sep 10: DP & Bitmask
 * [1262. Greatest Sum Divisible by Three](https://leetcode.com/problems/greatest-sum-divisible-by-three/)
 * [1371. Find the Longest Substring Containing Vowels in Even Counts](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/)
 
