@@ -38,4 +38,7 @@ Sep 10: DP & Bitmask
 * [1262. Greatest Sum Divisible by Three](https://leetcode.com/problems/greatest-sum-divisible-by-three/)
 * [1371. Find the Longest Substring Containing Vowels in Even Counts](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/)
 
+Sep 11: Boyer-Moore Majority Vote & Divide and Conquer
+* [229. Majority Element II](https://leetcode.com/problems/majority-element-ii/)
+* [241. Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/)
 
