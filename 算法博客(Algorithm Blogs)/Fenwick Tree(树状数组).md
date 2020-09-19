@@ -37,7 +37,7 @@ public:
     }
 
     void updateBinIdxTree(int idx, int val) {
-        while(idx <= capacity) {
+        while(idx < capacity) {
             biTree[idx] += val;
             idx = getNext(idx);
         }
