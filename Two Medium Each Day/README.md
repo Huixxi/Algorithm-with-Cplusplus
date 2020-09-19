@@ -42,3 +42,8 @@ Sep 11: Boyer-Moore Majority Vote & Divide and Conquer
 * [229. Majority Element II](https://leetcode.com/problems/majority-element-ii/)
 * [241. Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/)
 
+Sep 12: Prefix Sum & Binary Index Tree
+* [304. Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)
+* [307. Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/)
+
+
